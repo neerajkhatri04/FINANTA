@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Rahul Banerjee" />
+  <title>Finanta</title>
+
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <style>
+    .accordion-icon {
+      float: right;
+    }
+
+    .accordion .card {
+      background: #015f56;
+      color: #ffffff;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
+
+    .accordion .card button {
+      background: transparent;
+      color: #ffffff;
+      margin-bottom: 0px;
+    }
+
+    .card-text {
+      min-height: 6em;
+      /* Adjust based on your font size and line height */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      line-height: 1.5;
+      /* Adjust line height as needed */
+    }
+
+    .card button{
+      text-align: left;
+    }
+  </style>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "6M0L1GthrogPmB4ku",
+      });
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var form = document.getElementById("contact-form");
+      var success = document.getElementById("success");
+
+      function resetForm() {
+        form.reset();
+      }
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+            () => {
+              console.log("SUCCESS!");
+              resetForm();
+              success.innerHTML =
+                "<span style='color:green'>Your message has been sent successfully!</span>";
+            },
+            (error) => {
+              console.log("FAILED...", error);
+            }
+          );
+        });
+    };
+  </script>
+  <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+</head>
+
+<body class="">
+  <nav class="navbar navbar-expand-lg navbar-light topnav bg-landing" id="navigation"></nav>
+
+  <div class="container-fluid" style="
+        background-image: url('images/blogbg.png');
+        background-size: cover;
+        background-position: left center;
+        padding: 200px;
+        opacity: 0.8;
+      ">
+    <div class="container-xl">
+      <div class="d-flex flex-column align-items-center">
+        <div class="col-lg-12 text-center text-md-center text-center">
+          <h3 class="display-5 lh-1 fw-bold p-3 text-white">
+            Next-Generation Credit Decisioning Models: A Deep Dive into
+            Future-Ready Solutions
+          </h3>
+
+          <div class="d-flex justify-content-center col-lg-3 mx-auto mb-3">
+            <p class="text-white">15 Jan 2022</p>
+            <p class="text-white">&bull;</p>
+            <p class="text-white">15 min read</p>
+          </div>
+
+          <div class="col-lg-12 text-center text-md-center text-center d-flex gap-4 justify-content-center">
+            <a class="cta bg-white" style="color: #015f56">Download a resource</a>
+            <a class="cta-secondary text-white">Explore our other blog posts</a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column"></div>
+    </div>
+  </div>
+
+  <div class="container-fluid my-5">
+    <div class="container-xl d-flex">
+      <div style="width: 326px">
+        <ul class="sidebar gap-1">
+          <li class="me-4">
+            <p class="font-family-plus-jakarta-sans fw-bold lh-2 text-left"
+              style="font-size: 20px; line-height: 33px; color: #546662">
+              Table of contents
+            </p>
+          </li>
+          <li class="me-4">
+            <p class="lh-base mb-0 text-nowrap" style="overflow-x: hidden; text-overflow: ellipsis">
+              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  " href="#challanges-and-benefits">Challenges and Benefits of Advanced Credit Decisioning
+                Models</a>
+            </p>
+          </li>
+          <li class="me-4">
+            <p class="lh-base mb-0 text-nowrap" style="overflow-x: hidden; text-overflow: ellipsis">
+              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  " href="#challanges">Challenges</a>
+            </p>
+          </li>
+          <li class="me-4">
+            <p class="lh-base mb-0 text-nowrap" style="overflow-x: hidden; text-overflow: ellipsis">
+              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  " href="#benefits">Benefits</a>
+            </p>
+          </li>
+          <li class="me-4">
+            <p class="lh-base mb-0 text-nowrap" style="overflow-x: hidden; text-overflow: ellipsis">
+              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  " href="#why-business-critical">Why Advanced Credit Decisioning Models are
+                Business-Critical</a>
+            </p>
+          </li>
+          <li class="me-4">
+            <p class="lh-base mb-0 text-nowrap" style="overflow-x: hidden; text-overflow: ellipsis">
+              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  " href="#best-practice">Best Practices for Implementation</a>
+            </p>
+          </li>
+          <li class="me-4">
+            <p class="lh-base mb-0 text-nowrap" style="overflow-x: hidden; text-overflow: ellipsis">
+              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  " href="#approach">A Step-by-Step Approach for Implementation</a>
+            </p>
+          </li>
+          <li class="me-4">
+            <p class="lh-base mb-0 text-nowrap" style="overflow-x: hidden; text-overflow: ellipsis">
+              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  " href="#questions">Frequently Asked Questions</a>
+            </p>
+          </li>
+        </ul>
+        <div class="d-flex py-3 justify-content-center" style="background: #f9fafb">
+          <img class="mx-2" src="images/in-orange.svg" />
+          <img class="mx-2" src="images/x-orange.svg" />
+          <img class="mx-2" src="images/yt-orange.svg" />
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row px-5 pt-0">
+          <div>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              The development and application of advanced credit decisioning
+              models are integral in the financial world to accurately predict
+              creditworthiness, optimize risk management, and empower
+              sustainable financial services. This white paper will explore
+              the benefits, challenges, and best practices for the
+              implementation of these next-generation credit models.
+            </p>
+
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              The modern financial world demands more nuanced and efficient
+              methods of credit decisioning. These tools are essential for
+              assessing the creditworthiness of individuals or entities,
+              enabling financial institutions to extend credit, manage risk,
+              and make informed business decisions. The evolution of credit
+              decisioning models is business-critical, utilizing new data
+              sources, data mining techniques, and business expertise to
+              create more reliable and accurate predictions.
+            </p>
+          </div>
+        </div>
+
+        <div class="row p-5 pt-0">
+          <div>
+            <h3 class="my-5" id="challanges-and-benefits">
+              Challenges and Benefits of Advanced Credit Decisioning Models
+            </h3>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              Community banks and regional credit unions have a significant
+              role in fostering local economic growth, often serving
+              communities that may not have ready access to the larger
+              financial institutions. These smaller institutions can
+              considerably benefit from advanced credit decisioning models;
+              however, they face unique challenges in adopting them.
+            </p>
+
+            <div
+              class="d-grid justify-content-center align-items-center px-5 rounded-3 pb-3 pb-md-5 pt-3 pt-md-5 mb-3 mb-md-5 mt-md-5"
+              style="background-color: #006d77">
+              <div class="text-center mx-auto" style="max-width: 625px">
+                <img class="mb-3 mx-auto d-block" style="transform: scale(0.75)" src="images/icon-left-quote.svg"
+                  alt="quote icon" />
+                <p class="text-white font-chivo mb-3 fs-5" style="font-size: 1.25rem; line-height: 1.5">
+                  Next-generation credit decisioning models are integral to
+                  the future of financial services, offering a multitude of
+                  benefits while posing unique challenges.
+                </p>
+              </div>
+            </div>
+
+            <h3 class="my-5" id="challanges">Challenges</h3>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Data Quality and Availability:</span>
+              Community banks and credit unions often lack the large volume of
+              data typically needed to feed these advanced models. While these
+              institutions can leverage external data sources, concerns over
+              data privacy and the cost associated with procuring such data
+              may pose additional challenges
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Integration with Existing Systems:</span>
+              Many community banks and credit unions operate on legacy systems
+              that may not be compatible with the requirements of advanced
+              credit decisioning models. The cost of upgrading these systems
+              can be a significant burden for these smaller institutions
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Regulatory Compliance: </span> The
+              stringent regulatory landscape, including the Fair Credit
+              Reporting Act (FCRA) and Equal Credit Opportunity Act (ECOA),
+              means these models must be built with compliance in mind. These
+              institutions often operate with smaller compliance teams, which
+              may find it challenging to ensure these complex models meet all
+              regulatory requirements
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Focusing on Positive Selection:</span>
+              Banks can focus on customer segments that exhibit low credit
+              risk but are underserved by traditional financial institutions.
+              Using machine learning models, they can analyze demographic,
+              behavioral, and transactional data to identify these segments
+              and offer them personalized loan products.
+            </p>
+            <h3 class="my-5" id="benefits">Benefits</h3>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Improved Accuracy: </span> Advanced models
+              can leverage data from a wider range of sources, leading to
+              better predictions of creditworthiness. This is especially
+              critical for community banks and credit unions, which often
+              serve customers with thin or non-traditional credit files
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Enhanced Risk Management: </span>
+              The improved accuracy of these models allows for better risk
+              segmentation, leading to more effective risk management. This is
+              especially critical for smaller financial institutions, where a
+              significant credit loss can have a more substantial impact
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Customer Experience:</span> Community
+              banks and credit unions often differentiate themselves through
+              personalized service. Advanced credit decisioning models can
+              enhance this differentiation by providing deeper insights into
+              customers' financial behaviors, leading to a more tailored
+              offering
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Community Development:</span> With more
+              accurate and inclusive credit decisioning, these institutions
+              can better serve their communities by extending credit to
+              underserved populations. This can drive economic growth and
+              financial inclusion at the local level
+            </p>
+
+            <h3 class="my-5" id="why-business-critical">
+              Why Advanced Credit Decisioning Models are Business-Critical
+            </h3>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              Advanced credit decisioning models are a linchpin for community
+              banks and regional credit unions striving to maintain a
+              competitive edge, meet regulatory demands, and provide
+              exceptional service to their communities.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Competitive Edge: </span>
+              Traditional credit scoring models may not be able to accurately
+              evaluate the creditworthiness of certain customers, particularly
+              those with thin credit files or non-traditional credit
+              histories. Advanced credit decisioning models can incorporate a
+              broader range of data, enabling these institutions to more
+              accurately evaluate such customers and potentially expand their
+              customer base (See: Journal of Consumer Affairs, 2021).
+              Moreover, by providing quicker, more accurate credit decisions,
+              these institutions can significantly enhance their operational
+              efficiency and profitability.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Regulatory Compliance:</span> With
+              increased scrutiny from regulatory bodies to prevent
+              discriminatory lending practices and ensure fair credit
+              opportunities for all customers, advanced models are crucial. By
+              incorporating variables such as employment stability, rental
+              history, and utility payment history, these models can ensure a
+              more comprehensive and fair evaluation of creditworthiness while
+              remaining compliant with relevant regulation
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Customer Retention:</span> Community banks
+              and credit unions often compete with larger financial
+              institutions by providing superior, personalized customer
+              service. Advanced credit decisioning models can enhance this
+              service by providing deeper insights into customers' financial
+              behavior, leading to more tailored product offerings and
+              ultimately improving customer satisfaction and retention
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Effective Risk Management:</span>
+              Effective risk management is critical for community banks and
+              credit unions, as they often have lower risk tolerance than
+              their larger counterparts. Advanced credit decisioning models
+              allow for improved risk segmentation, enabling these
+              institutions to extend credit more responsibly and mitigate the
+              potential for significant credit losses
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Local Economic Development:</span>
+              Community banks and credit unions are central to their local
+              economies. Advanced credit decisioning models can improve their
+              ability to extend credit to underserved segments of their
+              communities, fostering local economic growth and enhancing
+              financial inclusion
+            </p>
+            <h3 class="my-5" id="best-practice">
+              Best Practices for Implementation
+            </h3>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Modular Implementation Approach: </span>
+              While a singular optimization algorithm run over a consolidated
+              database theoretically delivers an optimal model, industry
+              leaders favor a modular architecture. This incorporates multiple
+              sub-models based on data coverage, industry and geographic
+              variations. These modules, which are combined to yield a single,
+              overarching credit signal, can be easily added or removed,
+              allowing for the integration of new or differing data.
+              Consequently, the model remains flexible and robust.
+              Implementing this architecture requires coordination among
+              stakeholders including the business, model development team, and
+              model maintenance team.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Explore Data Sources:</span> Top
+              performers utilize a blend of internal and external data sources
+              to bolster the predictive power of credit signals. Traditional
+              internal data is combined with non-traditional data and enriched
+              with traditional external data. Other external non-traditional
+              data sources are also explored, including subjective data from
+              Relationship Managers and underwriters to fill gaps. Open
+              banking and non-traditional external data such as telecom and
+              social media data can provide valuable insights into customer
+              behaviors.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Data Mining:</span> Industry leaders excel
+              at mining existing data and combining data sources to extract
+              highly predictive credit signals. They leverage machine learning
+              (ML) and artificial intelligence (AI) to form a more complete,
+              albeit slightly imprecise, view of the customers. Advanced banks
+              leverage deep analytics and apply ML and AI in areas such as
+              creating segmentation rules, deriving credit signals, and
+              building and validating challenger models.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Business Expertise:</span> While ML and AI
+              are powerful tools, they should not be the sole basis of credit
+              models. Banks should leverage internal business expertise during
+              the model development process to better understand where credit
+              signals are missing, and then identify and validate new credit
+              signals. Model designers should consult with underwriters and
+              Relationship Managers to translate their insights into
+              qualitative questions for better credit signaling.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              Adhering to these best practices can help banks successfully
+              implement advanced credit decisioning models, enabling them to
+              make more accurate and informed credit decisions, respond
+              swiftly to economic disruptions, uncover new growth areas, and
+              maintain a competitive edge in the marketplace.
+            </p>
+
+            <h3 class="my-5" id="approach">
+              A Step-by-Step Approach for Implementation
+            </h3>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              Adopting a five-stage agile process can expedite the
+              implementation of a new credit decisioning model within six
+              months, a stark improvement from the standard industry timeline
+              of 12 to 24 months. The following steps outline this
+              transformative approach:
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Credit Model Review: </span>
+              Begin by conducting a comprehensive analysis of the existing
+              credit model. This includes a review of its methodological
+              setup, performance, and application within the business context
+              to pinpoint potential areas for enhancement.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Credit Model Design:</span> Evaluate the
+              current state of data readiness, identifying easy-to-integrate
+              data sources. Following this assessment, devise a roadmap for
+              data inclusion into the model. To identify areas of weakness,
+              carry out a comparative performance evaluation of the model
+              across various segments and against industry peers.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Data Inventory and Assessment:</span> Once
+              the needs are defined, the next step is to take stock of the
+              data available. This includes assessing the quality, relevance,
+              and accessibility of the data. Data gaps need to be identified,
+              and plans should be made to fill these gaps, possibly through
+              partnerships with data providers or by developing new data
+              collection methods. It's also necessary to ensure proper data
+              governance protocols are in place to maintain data integrity and
+              privacy.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Data Preparation and Engineering:</span>
+              This stage involves readying the data for modeling. It includes
+              data formatting, completeness testing, and the handling of
+              missing values and record treatment. These steps ensure the data
+              are in a state conducive to the subsequent modeling processes.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Development of Credit Scoring Models:</span>
+              Develop a production-ready minimal viable product (MVP) for the
+              next-generation credit decisioning model. This stage typically
+              includes three two-week cycles of modeling, incorporating
+              feedback from experts and data analysis in each iteration to
+              enhance the model's efficacy.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Integration of Credit Scoring in Lending
+                Transformation:</span>
+              The final stage involves automating lending processes and
+              updating the credit decisioning model with the newly developed
+              credit scoring models. This step effectively integrates the new
+              advanced models into the lending decision-making process,
+              thereby enhancing the overall efficiency and accuracy of credit
+              decisions. The final stage involves automating lending processes
+              and updating the credit decisioning model with the newly
+              developed credit scoring models. This step effectively
+              integrates the new advanced models into the lending
+              decision-making process, thereby enhancing the overall
+              efficiency and accuracy of credit decisions.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              <span class="fw-bold">Post-Implementation Review and Adjustment:</span>
+              The work doesn't stop after the model has been implemented.
+              Regular reviews should be conducted to assess its performance
+              and make adjustments as needed. As business needs change and as
+              new data becomes available, the model will need to be updated
+              and refined. A plan for regular review and adjustment will
+              ensure the model continues to meet the organization's needs and
+              performs optimally.
+            </p>
+            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+              style="text-align: left; color: #546662">
+              Next-generation credit decisioning models are integral to the
+              future of financial services, offering a multitude of benefits
+              while posing unique challenges. Implementing these models
+              requires a well-thought-out strategy, leveraging business
+              expertise, incorporating advanced data sources, and continuous
+              validation. With a clear understanding of these factors,
+              financial institutions can successfully implement advanced
+              credit decisioning models, improving their decision-making
+              capabilities, risk management, and ultimately, profitability.
+            </p>
+          </div>
+        </div>
+
+        <div class="row p-5 pt-0">
+          <div>
+            <h3 class="my-5" id="questions">Frequently Asked Questions</h3>
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      What are the primary benefits of implementing advanced credit decisioning models in community
+                      banks and credit unions?
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                  data-parent="#accordionExample">
+                  <div class="card-body">
+                    Advanced credit decisioning models provide several benefits, including improved accuracy in
+                    predicting creditworthiness, especially for customers with thin or non-traditional credit files.
+                    They also enhance risk management by allowing better risk segmentation, improve customer experience
+                    through personalized service, and contribute to community development by extending credit to
+                    underserved populations. These benefits help smaller institutions maintain a competitive edge,
+                    manage risks effectively, and foster local economic growth.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      What challenges do community banks and credit unions face when adopting advanced credit
+                      decisioning models?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    The main challenges include data quality and availability, as smaller institutions may not have
+                    access to large data volumes needed for these models. Integration issues with legacy systems can
+                    pose additional hurdles, alongside the high costs of system upgrades. Additionally, stringent
+                    regulatory compliance requirements need to be met, which can be demanding for institutions with
+                    smaller compliance teams.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      How can advanced credit decisioning models help with regulatory compliance?
+
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Advanced models are designed to incorporate a wider range of data, including non-traditional data
+                    sources like rental history or utility payments, which helps in making fairer credit evaluations.
+                    This comprehensive approach ensures compliance with regulations like the Fair Credit Reporting Act
+                    (FCRA) and Equal Credit Opportunity Act (ECOA), helping institutions avoid discriminatory lending
+                    practices and offer fair credit opportunities to all customers.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      What are the best practices for implementing advanced credit decisioning models?
+
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Best practices include adopting a modular implementation approach, exploring both internal and
+                    external data sources, and leveraging machine learning and artificial intelligence to enhance the
+                    predictive power of credit signals. It is also crucial to incorporate business expertise in the
+                    development process to ensure the models effectively capture and evaluate the creditworthiness.
+                    Regular post-implementation reviews are recommended to adjust and refine the models as needed,
+                    ensuring they continue to meet the changing demands and maintain their effectiveness.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background: #E6EEED">
+    <div class="container-xl py-5">
+      <div class="mt-4 text-center">
+        <h4 class="mb-4">Latest News</h4>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-center">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+          <div class="card" style="background-color: transparent;">
+            <img src="images/card1.svg" class="img-fluid" />
+            <div class="card-body px-0 py-2">
+              <span class="fw-smaller py-2">Alec Whitten • 17 Jan 2022</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">
+                  <a href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers.html"
+                    style="all: unset; cursor: pointer">
+                    Seven Innovative Strategies for Smaller Commercial Banks
+                    to
+                    <br />
+                    De-risk Borrowers
+                  </a>
+                </h5>
+                <div class="d-flex flex-column" style="height: 12px; width: 12px">
+                  <img src="images/right-arrow.png" class="img" />
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 py-2">
+              <p>
+                In a world increasingly driven by technology, data, and
+                digital marketing...
+              </p>
+            </div>
+            <div class="card-body px-0 py-2">
+              <a href="#" class="tag tag-maroon">Leadership</a>
+              <a href="#" class="tag tag-grey">Management</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+          <div class="card" style="background-color: transparent;">
+            <img src="images/card2.svg" class="img-fluid" />
+            <div class="card-body px-0 py-2">
+              <span class="fw-smaller py-2">Demi WIlkinson • 16 Jan 2022</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">
+                  <a href="/next-generation-credit-decisioning-models.html" style="all: unset; cursor: pointer">
+                    Next-Generation Credit Decisioning Models: A Deep Dive
+                    into Future-Ready Solutions
+                  </a>
+                </h5>
+                <div class="d-flex flex-column" style="height: 12px; width: 12px">
+                  <img src="images/right-arrow.png" class="img" />
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 py-2">
+              <p>
+                The development and application of advanced credit decisioning
+                models are integral...
+              </p>
+            </div>
+            <div class="card-body px-0 py-2">
+              <a href="#" class="tag tag-green">Product</a>
+              <a href="#" class="tag card-link">Research</a>
+              <a href="#" class="tag tag-red">Frameworks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center my-1">
+        <ul>
+          <li style="list-style: none">
+            <a class="cta-secondary" style="color: #546662" href="insights.html">See More</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid d-flex flex-column align-items-center py-5" style="
+        background: url('images/insights-bg.svg') no-repeat #015f56;
+        background-size: 100%;
+        color: #ffffff;
+      ">
+    <div class="container-xl">
+      <div class="col-lg-6 mx-auto d-flex justify-content-center gap-4 flex-column text-center">
+        <h2 class="font-family-plus-jakarta-sans fs-1 fw-bold text-center" style="
+              font-size: 45px;
+              line-height: 56.25px;
+              letter-spacing: -0.03em;
+            ">
+          Subscribe Now
+        </h2>
+
+        <p class="font-family-plus-jakarta-sans fs-5 fw-bold text-center">
+          Contact our support team for further assistance.
+        </p>
+
+        <div class="input-group mx-auto justify-content-center">
+          <input type="text" style="
+                border-top: 1px solid #d9d9d9;
+                border-bottom: 1px solid #d9d9d9;
+                border-left: 1px solid #d9d9d9;
+                border-right: none;
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+                background: transparent;
+                width: 313px;
+                padding: 26px 40px 26px 40px;
+                color: #fff;
+              " placeholder="Enter Your Email" class="p-4" /><a class="cta-orange" style="
+                padding: 26px 40px 26px 40px;
+                border-radius: 50px;
+                width: 177px;
+                margin-left: -50px;
+              ">Subscribe</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid bg-light d-flex justify-content-between align-items-center py-5" id="footer"></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(function () {
+      $("#footer").load("./footer.html");
+      $("#navigation").load("./navbar.html");
+
+      $(".rounded-rect").hover(
+        function () {
+          $(this)
+            .find(".title")
+            .text(
+              "Finanta’s Digital Credit Presentation feature comes equipped with standardized templates that streamline the creation of compelling loan narratives, ensuring consistency and clarity in every credit presentation. "
+            );
+          $(this).css("font-size", "12px");
+        },
+        function () {
+          $(this)
+            .find(".title")
+            .text("Standardized Loan Narrative Templates");
+          $(this).css("font-size", "15px");
+        }
+      );
+    });
+  </script>
+</body>
+
+</html>

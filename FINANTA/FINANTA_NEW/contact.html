@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rahul Banerjee" />
+    <title>Finanta</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "6M0L1GthrogPmB4ku",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var form = document.getElementById("contact-form");
+        var success = document.getElementById("success");
+
+        function resetForm() {
+          form.reset();
+        }
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+              () => {
+                console.log("SUCCESS!");
+                resetForm();
+                success.innerHTML =
+                  "<span style='color:green'>Your message has been sent successfully!</span>";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+  </head>
+  <body class="bg-landing">
+    <nav
+      class="navbar navbar-expand-lg navbar-light topnav"
+      id="navigation"
+    ></nav>
+
+    <div class="container-xl my-3" style="min-height: 50vh">
+      <div
+        class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center justify-content-center rounded-3"
+      >
+        <div class="col-lg-12 p-3 p-lg-5 pt-lg-3">
+          <h3 class="display-5 lh-1 fw-bold text-center mb-5">
+            Connect with Finanta
+          </h3>
+          <p
+            class="lead text-center px-xs-0 px-lg-5 lh-base"
+            style="
+              font-size: 14px;
+                "
+          >
+            We at Finanta are always eager to connect with you. Whether you have
+            questions about our commercial lending solutions, need assistance
+            with our services, or simply want to share your feedback, our team
+            is here to listen and help.
+          </p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-center mb-4 mb-lg-3"
+          >
+            <!--  <button type="button" class="cta col-lg-3 col-md-6 col-sm-12 col-xs-12">CTA</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" style="background: #fafafa">
+      <div class="container-fluid d-flex flex-wrap align-items-stretch">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.5025158838107!2d-117.07408149999999!3d33.016889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf0d20322b113%3A0x484b31f4fd580f58!2s16767%20Bernardo%20Center%20Dr%2C%20San%20Diego%2C%20CA%2092128%2C%20USA!5e0!3m2!1sen!2sin!4v1707396356654!5m2!1sen!2sin"
+              width="100%"
+              height="830"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              style="width: 100%"
+            ></iframe>
+          </div>
+          <div>
+            <ul
+              class="d-flex align-items-center justify-content-center py-3 px-5"
+            >
+              <li class="px-3">
+                <a href="https://twitter.com/Finanta_IO" target="_blank"
+                  ><img src="images/twitter.svg" class="img-fluid w-100"
+                /></a>
+              </li>
+              <li class="px-3">
+                <a
+                  href="https://www.linkedin.com/company/finanta-inc/"
+                  target="_blank"
+                >
+                  <img src="images/LinkedIN.svg" class="img-fluid w-100"
+                /></a>
+              </li>
+              <li class="px-3">
+                <a href="#" target="_blank">
+                  <img src="images/Youtube.svg" class="img-fluid w-100"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 px-5">
+          <form class="px-4 py-4" id="contact-form">
+            <h4>Get in Touch</h4>
+
+            <p>
+              You can reach us anytime via
+              <a href="mailto:info@finanta.io">info@finanta.io</a>
+            </p>
+            <div id="success"></div>
+            <div class="form-group mb-4">
+              <label>Name <span class="text-danger">*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                name="from_name"
+                id="from_name"
+                required
+              />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Business Email <span class="text-danger">*</span></label>
+              <input
+                type="email"
+                class="form-control"
+                name="user_email"
+                id="user_email"
+                required
+              />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Phone No. <span class="text-danger">*</span></label>
+              <input
+                type="number"
+                class="form-control"
+                name="phone"
+                id="phone"
+                required
+              />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Job Title <span class="text-danger">*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                name="jobtitle"
+                id="jobtitle"
+                required
+              />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Company <span class="text-danger">*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                name="company"
+                id="company"
+                required
+              />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Industry <span class="text-danger">*</span></label>
+              <select
+                class="form-select"
+                id="industry"
+                name="industry"
+                required
+              >
+                <option>Select Industry</option>
+                <option>Bank</option>
+                <option>Credit Union</option>
+                <option>Non-Bank Lender</option>
+                <option>Commercial Real-Estate Lender</option>
+                <option>Automotive Business Lender</option>
+
+                <option>Agricultural Equipment Lender</option>
+                <option>Equipment Leasing & Financing</option>
+
+                <option>Others</option>
+              </select>
+            </div>
+
+            <div class="form-group mb-4">
+              <label>How can we help?</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                cols="5"
+                id="message"
+                name="message"
+              >
+              </textarea>
+            </div>
+            <input type="submit" class="cta col-lg-4" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex flex-column align-items-center"
+      style="background: #015f56; color: #ffffff"
+    >
+      <div class="container-xl">
+        <div
+          class="d-flex justify-content-center align-items-center flex-column mt-6"
+        >
+          <h3
+            class="mt-2 text-center px-5-lg fw-bold"
+            style="padding-top: 100px; padding-bottom: 50px"
+          >
+            Finanta Headquarters
+          </h3>
+        </div>
+
+        <ul
+          class="d-flex flex-wrap justify-content-between align-items-center py-2"
+        >
+          <!-- <li class="text-center px-5">
+            <h5>Phone</h5>
+            <p class="fw-lighter">1-800-346-2356</p>
+          </li> -->
+          <li class="text-center px-5">
+            <h5>Location</h5>
+            <p class="fw-lighter">
+              16767 Bernardo Ctr. Dr., #27711, San Diego, CA 92198
+            </p>
+          </li>
+          <li class="text-center px-5">
+            <h5>Email</h5>
+            <p class="fw-lighter">info@finanta.io</p>
+          </li>
+        </ul>
+
+        <ul>
+          <li><h5 class="text-center pt-5">Our Partners</h5></li>
+        </ul>
+      </div>
+
+      <div class="container-fluid my-5">
+        <div class="marquee-container">
+          <!-- Repeat the marquee divs as needed for your content -->
+          <div class="marquee">
+            <img
+              src="images/solutions/moodys.png"
+              class="img-fluid"
+              style="padding-top: 20px"
+            />
+          </div>
+          <div class="marquee">
+            <img src="images/solutions/mxlogo.png" class="img-fluid" />
+          </div>
+          <div class="marquee">
+            <img
+              src="images/solutions/axway.png"
+              class="img-fluid"
+              style="padding-top: 10px"
+            />
+          </div>
+          <div class="marquee">
+            <img
+              src="images/solutions/lexisnexis.png"
+              class="img-fluid"
+              style="padding-top: 30px"
+            />
+          </div>
+          <div class="marquee">
+            <img
+              src="images/solutions/kony.png"
+              class="img-fluid"
+              style="padding-top: 20px"
+            />
+          </div>
+          <div class="marquee">
+            <img
+              src="images/solutions/carleton.png"
+              class="img-fluid"
+              style="padding-top: 0px"
+            />
+          </div>
+
+          <!-- Add more marquee divs as needed -->
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="container-fluid bg-light d-flex justify-content-between align-items-center py-5"
+      id="footer"
+    ></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        $("#footer").load("footer.html");
+        $("#navigation").load("navbar.html");
+      });
+    </script>
+  </body>
+</html>
+
+
+

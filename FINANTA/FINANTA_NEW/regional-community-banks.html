@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rahul Banerjee" />
+    <title>Finanta</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <style>
+      .card-text {
+        min-height: 6em;
+        /* Adjust based on your font size and line height */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.5;
+        /* Adjust line height as needed */
+      }
+
+      :root {
+        --brand-color-green: #015f56;
+        --text-white: #fff;
+      }
+
+      .impact-section {
+        background: var(--brand-color-green);
+      }
+
+      .impact-title {
+        color: var(--text-white);
+        letter-spacing: -1.35px;
+      }
+
+      .impact-stat-divider {
+        width: 2px;
+        height: 39px;
+        background-color: #ffdf00;
+      }
+
+      .impact-stat-description {
+        letter-spacing: -0.4px;
+        font: 400 20px/30px Inter, sans-serif;
+        color: #adbdcc;
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "6M0L1GthrogPmB4ku",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var form = document.getElementById("contact-form");
+        var success = document.getElementById("success");
+
+        function resetForm() {
+          form.reset();
+        }
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+              () => {
+                console.log("SUCCESS!");
+                resetForm();
+                success.innerHTML =
+                  "<span style='color:green'>Your message has been sent successfully!</span>";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+  </head>
+  <body class="bg-landing">
+    <nav
+      class="navbar navbar-expand-lg navbar-light topnav"
+      id="navigation"
+    ></nav>
+
+    <div class="container-xl pb-5 my-5">
+      <div class="row justify-content-evenly align-items-start rounded-3">
+        <div class="col-lg-5 pt-sm-5 text-lg-start text-md-center text-center">
+          <h3 class="display-5 lh-1 fw-bold pb-3">
+            Empowering Regional and Community Banks for the Future of Lending
+          </h3>
+          <p
+            class="lead pb-3"
+            style="
+              font-size: 22px;
+              font-weight: 500;
+              line-height: 36px;
+              color: #546662;
+            "
+          >
+            Navigate the complexities of commercial lending with Finanta’s
+            tailored solutions, designed with regional and community banks in
+            mind.
+          </p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-lg-start justify-content-md-center justify-content-center mb-4 mb-lg-3"
+          >
+            <a href="#" class="cta">Learn More</a>
+          </div>
+        </div>
+        <div class="col-lg-5 p-0">
+          <img
+            src="images/regional-community-banks/landing.png"
+            class="img-fluid w-100 rounded-3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white p-5">
+      <div class="container-fluid px-5">
+        <div class="row justify-content-evenly align-items-start rounded-3">
+          <div class="col-lg-6">
+            <img
+              src="images/asset-backed-lenders/section1.png "
+              class="img-fluid w-100"
+            />
+          </div>
+          <div
+            class="col-lg-5 pt-sm-5 pt-5 text-lg-start text-md-center text-center"
+          >
+            <h2 class="lh-1 fw-bold pb-3">
+              Elevate Your Lending Experience with Finanta
+            </h2>
+            <p class="lead fw-light lh-base pb-3" style="font-size: 17px">
+              In the fast-paced world of commercial real estate (CRE) lending,
+              Finanta strides to be the beacon of innovation and efficiency. Our
+              tailored software solutions are designed to empower CRE lenders
+              with the tools they need to navigate the complexities of the
+              market, streamline operations, and maximize profitability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex flex-column align-items-center"
+      style="background: #015f56; background-size: 100%; color: #ffffff"
+    >
+      <div class="container-fluid p-5">
+        <h2 class="col-lg-5 lh-1 fw-bold mx-auto text-center">
+          Overcoming Key Challenges for Regional and Community Banks
+        </h2>
+        <p
+          class="col-lg-4 lh-base text-center mx-auto mt-4"
+          style="font-size: 16px"
+        >
+          Regional and community banks are at a crossroads, facing a myriad of
+          challenges that threaten to undermine their competitiveness and
+          efficiency.
+        </p>
+        <div
+          class="row justify-content-center align-items-start rounded-3 mt-5"
+        >
+          <div
+            class="col-lg-12 col-md-12 text-lg-start text-md-center text-center"
+          >
+            <div class="d-flex justify-content-between">
+              <div style="width: calc(20% - 8px)">
+                <div
+                  id="rounded-rect-1"
+                  class="rounded-rect d-flex flex-column justify-content-center align-items-center px-4 mx-0 position-relative"
+                  style="height: 200px; color: #090914; width: auto"
+                >
+                  <span><img src="images/plus-circle.png" /></span>
+                  <span class="card-side1 title">Regulatory Compliance</span>
+                </div>
+              </div>
+              <div style="width: calc(20% - 8px)">
+                <div
+                  id="rounded-rect-2"
+                  class="rounded-rect d-flex flex-column justify-content-center align-items-center px-4 mx-0 position-relative"
+                  style="height: 200px; color: #090914; width: auto"
+                >
+                  <span><img src="images/plus-circle.png" /></span>
+                  <span class="card-side1 title"
+                    >Technological Integration</span
+                  >
+                </div>
+              </div>
+              <div style="width: calc(20% - 8px)">
+                <div
+                  id="rounded-rect-3"
+                  class="rounded-rect d-flex flex-column justify-content-center align-items-center px-4 mx-0 position-relative"
+                  style="height: 200px; color: #090914; width: auto"
+                >
+                  <span><img src="images/plus-circle.png" /></span>
+                  <span class="card-side1 title">Resource Constraints</span>
+                </div>
+              </div>
+              <div style="width: calc(20% - 8px)">
+                <div
+                  id="rounded-rect-4"
+                  class="rounded-rect d-flex flex-column justify-content-center align-items-center px-4 mx-0 position-relative"
+                  style="height: 200px; color: #090914; width: auto"
+                >
+                  <span><img src="images/plus-circle.png" /></span>
+                  <span class="card-side1 title">Digital Transformation</span>
+                </div>
+              </div>
+              <div style="width: calc(20% - 8px)">
+                <div
+                  id="rounded-rect-5"
+                  class="rounded-rect d-flex flex-column justify-content-center align-items-center px-4 mx-0 position-relative"
+                  style="height: 200px; color: #090914; width: auto"
+                >
+                  <span><img src="images/plus-circle.png" /></span>
+                  <span class="card-side1 title">Risk Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex flex-column align-items-center"
+      style="
+        background: url('images/asset-backed-lenders/circles.png') no-repeat
+          #ffffff;
+        background-size: 100%;
+        color: #052421;
+      "
+    >
+      <div class="container-xl">
+        <div class="d-flex flex-column">
+          <div
+            class="d-flex justify-content-center align-items-center flex-column"
+          >
+            <h3
+              class="mt-2 text-center px-5-lg pt-5 col-lg-8"
+              style="font-size: 25px; line-height: 32.5px"
+            >
+              Finanta is here to bridge that gap, offering solutions that turn
+              these challenges into opportunities for growth and innovation. 
+            </h3>
+          </div>
+
+          <div class="d-flex justify-content-center pb-5 mt-3">
+            <a class="cta">Explore How Finanta Can Help</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex flex-column align-items-center"
+      style="background: #015f56; background-size: 100%; color: #ffffff"
+    >
+      <div class="container-xl p-5 mt-3">
+        <h2 class="col-lg-8 lh-1 fw-bold mx-auto text-center">
+          Finanta’s Solutions Showcase for <br />
+          Banks
+        </h2>
+        <p
+          class="col-lg-8 lh-base text-center mx-auto mt-4"
+          style="font-size: 16px"
+        >
+          Our comprehensive suite of lending software is designed to empower
+          your bank with cutting-edge tools for every aspect of commercial
+          lending
+        </p>
+      </div>
+
+      <div class="container-xl d-flex mb-5">
+        <ul class="col-lg-3 p-3">
+          <li>
+            <img
+              src="images/regional-community-banks/mouse-circle.png"
+              alt=""
+              class="pb-3"
+            />
+          </li>
+          <li class="fw-bold lh-2 mb-3 fs-5">Loan Lifecycle Management</li>
+          <li class="fw-light" style="font-size: 14px">
+            Streamline processes from application to disbursement, reducing time
+            and costs.
+          </li>
+        </ul>
+
+        <ul class="col-lg-3 p-3">
+          <li>
+            <img
+              src="images/regional-community-banks/money-3.png"
+              alt=""
+              class="pb-3"
+            />
+          </li>
+          <li class="fw-bold lh-2 mb-3 fs-5">
+            Digital Credit Presentation and Regulatory Compliance
+          </li>
+          <li class="fw-light" style="font-size: 14px">
+            Providing the tools necessary to continuously assess and act upon
+            any arising risk throughout the loan term.
+          </li>
+        </ul>
+
+        <ul class="col-lg-3 p-3">
+          <li>
+            <img
+              src="images/regional-community-banks/setting-2.png"
+              alt=""
+              class="pb-3"
+            />
+          </li>
+          <li class="fw-bold lh-2 mb-3 fs-5">Asset & Collateral Management </li>
+          <li class="fw-light" style="font-size: 14px">
+            Gain robust tools for managing loan collateral and documentation,
+            enhancing security and efficiency.
+          </li>
+        </ul>
+
+        <ul class="col-lg-3 p-3">
+          <li>
+            <img
+              src="images/regional-community-banks/graph.png"
+              alt=""
+              class="pb-3"
+            />
+          </li>
+          <li class="fw-bold lh-2 mb-3 fs-5">
+            Reporting <br />
+            and Analytics
+          </li>
+          <li class="fw-light" style="font-size: 14px">
+            Leverage data-driven insights for informed decision-making,
+            identifying trends and opportunities.
+          </li>
+        </ul>
+      </div>
+
+      <div class="container-xl d-flex mb-5">
+        <ul class="col-lg-3 p-3">
+          <li>
+            <img
+              src="images/regional-community-banks/arrow-3.png"
+              alt=""
+              class="pb-3"
+            />
+          </li>
+          <li class="fw-bold lh-2 mb-3 fs-5">
+            Seamless <br />
+            Integration
+          </li>
+          <li class="fw-light" style="font-size: 14px">
+            Enjoy seamless integration with essential third-party services,
+            expanding your capabilities and reach.
+          </li>
+        </ul>
+
+        <ul class="col-lg-3 p-3">
+          <li>
+            <img
+              src="images/regional-community-banks/global.png"
+              alt=""
+              class="pb-3"
+            />
+          </li>
+          <li class="fw-bold lh-2 mb-3 fs-5">
+            Borrower <br />
+            360
+          </li>
+          <li class="fw-light" style="font-size: 14px">
+            Build and maintain strong relationships with borrowers through
+            personalized communication and services
+          </li>
+        </ul>
+
+        <ul class="col-lg-3 p-3">
+          <li>
+            <img
+              src="images/regional-community-banks/bank.png"
+              alt=""
+              class="pb-3"
+            />
+          </li>
+          <li class="fw-bold lh-2 mb-3 fs-5">Loan Portfolio Management</li>
+          <li class="fw-light" style="font-size: 14px">
+            Efficiently manage and monitor your entire loan portfolio,
+            identifying areas for growth and improvement.
+          </li>
+        </ul>
+
+        <ul class="col-lg-3 p-3">
+          <li>
+            <img
+              src="images/regional-community-banks/autobrightness.png"
+              alt=""
+              class="pb-3"
+            />
+          </li>
+          <li class="fw-bold lh-2 mb-3 fs-5">
+            Automated <br />
+            Decisioning
+          </li>
+          <li class="fw-light" style="font-size: 14px">
+            Speed up the loan approval process with automated decision-making
+            based on predefined criteria and risk assessments.
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex justify-content-center pb-5 mt-3">
+        <a
+          class="cta-secondary"
+          style="background-color: #ffffff; color: #015f56"
+          >Explore How Finanta Can Help </a
+        >
+      </div>
+    </div>
+
+    <div class="container-fluid d-flex" style="background: #f9fafb">
+      <div class="container-xl py-4 cardcontainer my-5">
+        <div class="col-lg-12">
+          <div class="row">
+            <div
+              class="d-flex col-lg-4 pt-sm-5 pt-5 text-lg-start text-md-center text-center align-items-center"
+            >
+              <div class="d-flex flex-column">
+                <h2 class="lh-1 fw-bold pb-3">
+                  Driving Lending Success in Community and Regional Banks
+                </h2>
+                <p class="lead fw-light lh-base pb-3" style="font-size: 16px">
+                  Finanta’s cutting-edge commercial lending software is crafted
+                  to deliver a paradigm shift in commercial lending operations
+                  of regional and community banks. Our solution is designed to
+                  drive significant improvements across key metrics, ensuring
+                  your bank stays competitive and efficient in a rapidly
+                  evolving market:
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex col-lg-8 justify-content-evenly">
+              <div
+                class="col-lg-6 pt-4"
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                "
+              >
+                <ul class="col-lg-12 col-md-12 col-sm-12 pt-lg-5 ps-0">
+                  <li class="pt-lg-1">
+                    <div
+                      class="card mx-2 shadow-lg"
+                      style="border: 3px solid #fff"
+                    >
+                      <img
+                        src="images/regional-community-banks/setting-3.png"
+                        style="max-width: 124px"
+                        class="pb-5 ps-3 pt-3"
+                      />
+                      <div class="card-body px-3 py-3">
+                        <h5 class="card-title">Enhanced Efficiency</h5>
+                        <p class="card-text lh-base" style="font-size: small">
+                          Streamline processes for faster loan processing and
+                          reduced operational costs.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+                <ul class="col-lg-12 col-md-12 col-sm-12 ps-0">
+                  <li class="pt-lg-1">
+                    <div
+                      class="card mx-2 shadow-lg"
+                      style="border: 3px solid #fff"
+                    >
+                      <img
+                        src="images/regional-community-banks/alarm.png"
+                        style="max-width: 124px"
+                        class="pb-5 ps-3 pt-3"
+                      />
+                      <div class="card-body px-3 py-3">
+                        <h5 class="card-title">Better Risk Management</h5>
+                        <p
+                          class="card-text lh-base fs-smaller"
+                          style="font-size: small"
+                        >
+                          Implement sophisticated risk assessment tools for
+                          proactive risk mitigation.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="col-lg-6"
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                "
+              >
+                <ul class="col-lg-12 col-md-12 col-sm-12 ps-0">
+                  <li>
+                    <div
+                      class="card mx-2 shadow-lg"
+                      style="border: 3px solid #fff"
+                    >
+                      <img
+                        src="images/regional-community-banks/star.png"
+                        style="max-width: 124px"
+                        class="pb-5 ps-3 pt-3"
+                      />
+                      <div class="card-body px-3 py-3">
+                        <h5 class="card-title">
+                          Improved Customer Satisfaction
+                        </h5>
+                        <p class="card-text lh-base" style="font-size: small">
+                          Deliver quick, reliable services to boost customer
+                          trust and retention.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="col-lg-12 col-md-12 col-sm-12 ps-0">
+                  <li>
+                    <div
+                      class="card mx-2 shadow-lg"
+                      style="border: 3px solid #fff"
+                    >
+                      <img
+                        src="images/regional-community-banks/tick-circle.png"
+                        style="max-width: 124px"
+                        class="pb-5 ps-3 pt-3"
+                      />
+                      <div class="card-body px-3 py-3">
+                        <h5 class="card-title">Stronger Compliance</h5>
+                        <p class="card-text lh-base" style="font-size: small">
+                          Utilize advanced compliance tools to reduce the risk
+                          of regulatory violations.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="col-lg-12 col-md-12 col-sm-12 ps-0">
+                  <li>
+                    <div
+                      class="card mx-2 shadow-lg"
+                      style="border: 3px solid #fff"
+                    >
+                      <img
+                        src="images/regional-community-banks/status-up.png"
+                        style="max-width: 124px"
+                        class="pb-5 ps-3 pt-3"
+                      />
+                      <div class="card-body px-3 py-3">
+                        <h5 class="card-title">Increased ROI</h5>
+                        <p class="card-text lh-base" style="font-size: small">
+                          Achieve overall improvements in lending operations for
+                          a higher return on investment.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid impact-section py-5"
+      style="background: #015f56; background-size: 100%; color: #ffffff"
+    >
+      <div class="container py-3">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="impact-title text-center fw-bold mb-5">
+              Finanta's Impact
+            </h2>
+            <div class="row mb-5 justify-content-evenly">
+              <div class="col-md-6">
+                <div
+                  class="impact-stat-content d-flex flex-column justify-content-center"
+                >
+                  <div class="impact-stat-value d-flex align-items-center mb-1">
+                    <div class="impact-stat-divider me-3"></div>
+                    <h1
+                      class="impact-stat-percentage fw-bold text-white"
+                      style="font-size: 80px; line-height: 89px"
+                    >
+                      40%
+                    </h1>
+                  </div>
+                  <div class="impact-stat-description ms-3">
+                    Optimize commercial loan origination for a 40% efficiency
+                    boost.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="impact-stat-content d-flex flex-column justify-content-center"
+                >
+                  <div class="impact-stat-value d-flex align-items-center mb-1">
+                    <div class="impact-stat-divider me-3"></div>
+                    <h1
+                      class="impact-stat-percentage fw-bold text-white"
+                      style="font-size: 80px; line-height: 89px"
+                    >
+                      72%
+                    </h1>
+                  </div>
+                  <div class="impact-stat-description ms-3">
+                    Achieve upto 72% reduction in cost overheads
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-evenly">
+              <div class="col-md-6">
+                <div
+                  class="impact-stat-content d-flex flex-column justify-content-center"
+                >
+                  <div class="impact-stat-value d-flex align-items-center mb-1">
+                    <div class="impact-stat-divider me-3"></div>
+                    <h1
+                      class="impact-stat-percentage fw-bold text-white"
+                      style="font-size: 80px; line-height: 89px"
+                    >
+                      55%
+                    </h1>
+                  </div>
+                  <div class="impact-stat-description ms-3">
+                    Automate loan management for a powerful 55% increase in loan
+                    volumes.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="impact-stat-content d-flex flex-column justify-content-center"
+                >
+                  <div class="impact-stat-value d-flex align-items-center mb-1">
+                    <div class="impact-stat-divider me-3"></div>
+                    <h1
+                      class="impact-stat-percentage fw-bold text-white"
+                      style="font-size: 80px; line-height: 89px"
+                    >
+                      33%
+                    </h1>
+                  </div>
+                  <div class="impact-stat-description ms-3">
+                    Cut risk exposure by up to 33% with our advanced risk
+                    assessment tools.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex align-items-center"
+      style="background: #f9fafb"
+    >
+      <div
+        class="container-xl px-3 py-5 d-flex flex-column"
+        style="min-height: 50vh"
+      >
+        <div class="d-flex flex-column align-items-center">
+          <h2
+            class="text-center col-lg-10 fw-bold"
+            style="font-size: 45px; line-height: 56.25px"
+          >
+            “Finanta has saved us thousands of hours of work and has unlock data
+            insights we never thought possible.”
+          </h2>
+
+          <img
+            src="images/grey-avatar.png"
+            class="img-fluid mt-4"
+            style="width: 50px"
+          />
+          <span class="" style="font-size: 16px; color: #546662"
+            >Chief Lending Officer at a Regional Bank </span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid bg-white p-5"
+      style="background: #fff; background-size: 100%"
+    >
+      <div class="container-fluid px-5 my-5">
+        <div class="row justify-content-evenly align-items-center rounded-3">
+          <div
+            class="col-lg-5 pt-sm-5 text-lg-start text-md-center text-center"
+          >
+            <h2 class="lh-1 fw-bold pb-3">
+              Ready to Transform Your Commercial Lending Operations? 
+            </h2>
+            <p class="lead fw-light lh-base pb-3" style="font-size: 16px">
+              Contact Finanta today to schedule a demo and discover how our
+              solutions can propel your bank into the future of lending. 
+            </p>
+
+            <div
+              class="d-grid gap-2 d-md-flex justify-content-lg-start justify-content-md-center justify-content-center mb-4 mb-lg-3"
+            >
+              <a href="bookademo.html" class="cta">Get in Touch</a>
+            </div>
+          </div>
+          <div class="col-lg-6 p-0">
+            <img
+              src="images/regional-community-banks/section_contact.png"
+              class="img-fluid w-100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid d-flex flex-wrap align-items-stretch p-0">
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+        style="background: #ff9201"
+      >
+        <img src="images/demo-image.jpg" class="img-fluid w-100" />
+      </div>
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-xs-12 px-5"
+        style="background: #ffffff"
+      >
+        <form class="px-4 py-4" id="contact-form">
+          <h4>See a Demo</h4>
+
+          <p>
+            You can reach us anytime via
+            <a href="info@finanta.io">info@finanta.io</a>
+          </p>
+
+          <div class="form-group mb-4">
+            <label>Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="from_name"
+              id="from_name"
+              required
+            />
+          </div>
+
+          <div class="form-group mb-4">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              name="user_email"
+              id="user_email"
+              required
+            />
+          </div>
+
+          <div class="form-group mb-4">
+            <label>Phone No.</label>
+            <input type="number" class="form-control" name="phone" id="phone" />
+          </div>
+
+          <div class="form-group mb-4">
+            <label>How can we help?</label>
+            <textarea
+              class="form-control"
+              rows="3"
+              cols="5"
+              name="message"
+              id="message"
+              required
+            >
+            </textarea>
+          </div>
+          <input type="submit" class="cta" value="Get a Demo" />
+          <div id="success"></div>
+        </form>
+      </div>
+    </div>
+
+    <footer
+      class="container-fluid bg-light d-flex justify-content-between align-items-center py-5"
+      id="footer"
+    ></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        $("#footer").load("./footer.html");
+        $("#navigation").load("./navbar.html");
+
+        $("#rounded-rect-1").hover(
+          function () {
+            $(this)
+              .find(".title")
+              .text(
+                "Keeping pace with ever-changing regulations and ensuring adherence."
+              )
+              .addClass("card-side2")
+              .removeClass("card-side1");
+          },
+          function () {
+            $(this)
+              .find(".title")
+              .text("Regulatory Compliance")
+              .addClass("card-side1")
+              .removeClass("card-side2");
+          }
+        );
+
+        $("#rounded-rect-2").hover(
+          function () {
+            $(this)
+              .find(".title")
+              .text(
+                "Overcoming the limitations of outdated systems and the lack of interoperability."
+              )
+              .addClass("card-side2")
+              .removeClass("card-side1");
+          },
+          function () {
+            $(this)
+              .find(".title")
+              .text("Technological Integration")
+              .addClass("card-side1")
+              .removeClass("card-side2");
+          }
+        );
+
+        $("#rounded-rect-3").hover(
+          function () {
+            $(this)
+              .find(".title")
+              .text(
+                "Competing with larger banks despite smaller budgets and fewer personnel."
+              )
+              .addClass("card-side2")
+              .removeClass("card-side1");
+          },
+          function () {
+            $(this)
+              .find(".title")
+              .text("Resource Constraints")
+              .addClass("card-side1")
+              .removeClass("card-side2");
+          }
+        );
+
+        $("#rounded-rect-4").hover(
+          function () {
+            $(this)
+              .find(".title")
+              .text(
+                "Meeting the growing demand for online and mobile banking services."
+              )
+              .addClass("card-side2")
+              .removeClass("card-side1");
+          },
+          function () {
+            $(this)
+              .find(".title")
+              .text("Digital Transformation")
+              .addClass("card-side1")
+              .removeClass("card-side2");
+          }
+        );
+
+        $("#rounded-rect-5").hover(
+          function () {
+            $(this)
+              .find(".title")
+              .text(
+                "Effectively assessing and mitigating risks in a volatile market."
+              )
+              .addClass("card-side2")
+              .removeClass("card-side1");
+          },
+          function () {
+            $(this)
+              .find(".title")
+              .text("Risk Management")
+              .addClass("card-side1")
+              .removeClass("card-side2");
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

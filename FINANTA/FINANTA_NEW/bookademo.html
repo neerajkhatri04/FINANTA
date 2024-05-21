@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rahul Banerjee" />
+    <title>Finanta</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "6M0L1GthrogPmB4ku",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var form = document.getElementById("contact-form");
+        var success = document.getElementById("success");
+
+        function resetForm() {
+          form.reset();
+        }
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+              () => {
+                console.log("SUCCESS!");
+                resetForm();
+                success.innerHTML =
+                  "<span style='color:green'>Your message has been sent successfully!</span>";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+  </head>
+  <body class="bg-landing">
+    <nav
+      class="navbar navbar-expand-lg navbar-light topnav"
+      id="navigation"
+    ></nav>
+
+    <div class="container-fluid">
+      <div class="container-xl my-3">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-stretch rounded-3">
+          <div class="col-lg-6 text-lg-start text-md-center text-center demo">
+            <h3 class="display-5 lh-1 fw-bold">Experience Finanta in Action</h3>
+            <p class="lead fw-light lh-base pt-4" style="font-size: 22px">
+              Dive into the evolving landscape of commercial lending with
+              in-depth analyses, latest trends, and success strategies for banks
+              and credit unions. Explore blogs, case studies, brochures,
+              whitepapers and more.
+            </p>
+            <h3 class="py-4 fw-bold">What can you expect?</h3>
+            <ul>
+              <li style="font-size: 22px">Tailored solutions exploration</li>
+              <li style="font-size: 22px">Real-Time Feature Demonstrations</li>
+              <li style="font-size: 22px">Expert Insights & Answers</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 p-0">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <form class="px-4 py-4" id="contact-form">
+                <div id="success"></div>
+                <div class="form-group mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your name"
+                    name="from_name"
+                    id="from_name"
+                    style="height: 60px"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mb-2">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="you@company.com"
+                    name="user_email"
+                    id="user_email"
+                    style="height: 60px"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mb-2">
+                  <input
+                    type="phone"
+                    class="form-control"
+                    placeholder="+1 (555) 000-0000"
+                    style="height: 60px"
+                    name="phone"
+                    id="phone"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Job Title"
+                    name="jobtitle"
+                    id="jobtitle"
+                    style="height: 60px"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Company"
+                    name="company"
+                    id="company"
+                    style="height: 60px"
+                    required
+                  />
+                </div>
+                <div>
+                  <p class="fw-smaller lh-base text-grey fw-light">
+                    By completing this form, you'll gain access to the
+                    information you've requested along with updates and
+                    marketing materials about Finanta's offerings and events.
+                    You have the freedom to opt out of these communications at
+                    any time by using the unsubscribe option provided in our
+                    emails, or by contacting us at
+                    <a href="mailto:info@finanta.com">info@finanta.com</a>. For
+                    more insights on your privacy rights and how we handle your
+                    personal data, please visit our privacy policy.
+                  </p>
+                </div>
+                <input
+                  type="submit"
+                  class="cta d-grid col-lg-6"
+                  value="Submit"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="background: #fff">
+      <div class="container-xl py-5">
+        <div class="mt-4 text-center">
+          <h4 class="mb-4">
+            Dive into the evolving landscape of commercial lending with in-depth
+            analyses, latest trends, and success strategies for banks, credit
+            unions, and more.
+          </h4>
+        </div>
+
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-center"
+        >
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card">
+              <img src="images/card1.svg" class="img-fluid" />
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2">Alec Whitten • 17 Jan 2022</span>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers.html"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Seven Innovative Strategies for Smaller Commercial Banks
+                      to
+                      <br />
+                      De-risk Borrowers
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  In a world increasingly driven by technology, data, and
+                  digital marketing...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-maroon">Leadership</a>
+                <a href="#" class="tag tag-grey">Management</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card">
+              <img src="images/card2.svg" class="img-fluid" />
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 16 Jan 2022</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/next-generation-credit-decisioning-models.html"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Next-Generation Credit Decisioning Models: A Deep Dive
+                      into Future-Ready Solutions
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  The development and application of advanced credit decisioning
+                  models are integral...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center my-1">
+          <ul>
+            <li style="list-style: none">
+              <a
+                class="cta-secondary"
+                style="color: #546662"
+                href="insights.html"
+                >See More</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex align-items-center"
+      style="background: #f9fafb"
+    >
+      <div
+        class="container-xl px-5 py-5 d-flex flex-column"
+        style="min-height: 50vh"
+      >
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <h4 class="text-center">
+            “Finanta has transformed our lending institution. With a 35% boost
+            in operational efficiency, 20% less risk exposure, and a 25%
+            increase in customer retention, they've truly elevated our lending
+            game. Finanta's expertise in commercial lending automation is
+            unmatched. We couldn't be happier with the results.”
+          </h4>
+
+          <img
+            src="images/grey-avatar.png"
+            class="img-fluid mt-4"
+            style="width: 50px"
+          />
+          <span class="fw-bold mb-4" style="font-size: 18px"
+            >Chief Lending Officer at a Regional Bank</span
+          >
+
+          <div class="container-fluid my-5">
+            <div class="marquee-container">
+              <!-- Repeat the marquee divs as needed for your content -->
+              <div class="marquee bg-white">
+                <img
+                  src="images/solutions/moodys.png"
+                  class="img-fluid"
+                  style="padding-top: 20px"
+                />
+              </div>
+              <div class="marquee bg-white">
+                <img src="images/solutions/mxlogo.png" class="img-fluid" />
+              </div>
+              <div class="marquee bg-white">
+                <img
+                  src="images/solutions/axway.png"
+                  class="img-fluid"
+                  style="padding-top: 10px"
+                />
+              </div>
+              <div class="marquee bg-white">
+                <img
+                  src="images/solutions/lexisnexis.png"
+                  class="img-fluid"
+                  style="padding-top: 30px"
+                />
+              </div>
+              <div class="marquee bg-white">
+                <img
+                  src="images/solutions/kony.png"
+                  class="img-fluid"
+                  style="padding-top: 20px"
+                />
+              </div>
+              <div class="marquee bg-white">
+                <img
+                  src="images/solutions/carleton.png"
+                  class="img-fluid"
+                  style="padding-top: 0px"
+                />
+              </div>
+
+              <!-- Add more marquee divs as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center testimonials">
+      <div
+        class="container-xl px-5 py-5 text-center d-flex justify-content-center flex-column"
+        style="min-height: 30vh"
+      >
+        <div class="col-lg-4 mx-auto">
+          <!-- Add mx-auto class here -->
+          <h5 class="text-white text-center mt-4">
+            Want to reach us quicker? Drop us an email on
+          </h5>
+          <p class="fw-light text-white text-center">sales@finanta.io</p>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="container-fluid bg-light d-flex justify-content-between align-items-center py-5"
+      id="footer"
+    ></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        $("#footer").load("footer.html");
+        $("#navigation").load("navbar.html");
+      });
+    </script>
+  </body>
+</html>

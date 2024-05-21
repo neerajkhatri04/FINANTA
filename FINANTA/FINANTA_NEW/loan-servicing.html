@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rahul Banerjee" />
+    <title>Finanta</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "6M0L1GthrogPmB4ku",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var form = document.getElementById("contact-form");
+            var success = document.getElementById("success");
+
+            function resetForm() {
+                form.reset();
+            }
+            document
+                .getElementById("contact-form")
+                .addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+                        () => {
+                            console.log("SUCCESS!");
+                            resetForm();
+                            success.innerHTML =
+                                "<span style='color:green'>Your message has been sent successfully!</span>";
+                        },
+                        (error) => {
+                            console.log("FAILED...", error);
+                        }
+                    );
+                });
+        };
+    </script>
+    <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+</head>
+
+<body class="bg-landing">
+    <nav class="navbar navbar-expand-lg navbar-light topnav" id="navigation">
+    </nav>
+
+    <div class="container-xl  my-5">
+        <div class="row justify-content-evenly align-items-start rounded-3">
+            <div class="col-lg-5 pt-sm-5 text-lg-start text-md-center text-center">
+                <h3 class="display-5 lh-1 fw-bold pb-3">
+                    Finanta’s Advanced Loan Servicing Solution 
+                </h3>
+                <p class="lead fw-light lh-base pb-3" style="font-size: 16px;">
+                    Maximize efficiency and customer satisfaction in your loan
+                    portfolio with Finanta's innovative Loan Servicing tools,
+                    designed for the modern lender.
+                </p>
+                <div
+                    class="d-grid gap-2 d-md-flex justify-content-lg-start justify-content-md-center justify-content-center mb-4 mb-lg-3">
+                    <a href="bookademo.html" class="cta">Explore Now</a>
+
+                </div>
+            </div>
+            <div class="col-lg-6 p-0 ">
+                <img src="images/loanservice.png" class="img-fluid" style="width: 85%;" />
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid bg-white p-5">
+
+        <div class="container-fluid px-5">
+            <div class="row justify-content-evenly align-items-center rounded-3">
+                <div class="col-lg-6 p-0 ">
+                    <img src="images/deliver-loan.png" class="img-fluid  me-4" />
+                </div>
+                <div class="col-lg-5 pt-sm-5 text-lg-start text-md-center text-center ms-2">
+                    <h2 class="lh-1 fw-bold pb-3">
+                        Delivering a Superior Loan Servicing Experience 
+                    </h2>
+                    <p class="lead fw-light lh-base pb-3" style="font-size: 16px;">
+                        Finanta revolutionizes the commercial lending cycle with a focus on efficiency, adaptability,
+                        and client success. Our Loan Servicing module streamlines post-origination management, ensuring
+                        consistent lender-borrower engagement and the agility to meet evolving financial demands with
+                        robust reliability.
+                    </p>
+
+                    <div
+                        class="d-grid gap-2 d-md-flex justify-content-lg-start justify-content-md-center justify-content-center mb-4 mb-lg-3">
+                        <a href="bookademo.html" class="cta">Book a Demo</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center" style="background: #F9FAFB">
+        <div class="container-xl py-4 cardcontainer my-5">
+            <div class="d-flex justify-content-center align-items-center flex-column mt-4">
+                <h4 class="mb-4 text-center col-lg-6 col-md-6 col-sm-12 col-xs-12 fw-bold">
+                    Elevating Every Aspect of Loan Servicing 
+                </h4>
+            </div>
+
+
+            <div class="d-flex justify-content-center">
+                <div class="col-lg-4 pt-4">
+
+                    <ul class="col-lg-12 col-md-12 col-sm-12 pt-lg-5 ps-0">
+                        <li class="pt-lg-1">
+                            <div class="card mx-2 shadow-lg" style="border:3px solid #fff">
+                                <img src="images/setting.png" style="max-width: 124px;" class="pb-5 ps-3 pt-3" />
+                                <div class="card-body px-3 py-3">
+                                    <h5 class="card-title">Streamlined Repayment Management</h5>
+                                    <p class="card-text lh-base" style="font-size: small;">
+                                        Finanta’s Digital Credit Presentation feature comes equipped with standardized
+                                        templates that streamline the creation of compelling loan narratives, ensuring
+                                        consistency and clarity in every credit presentation.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="col-lg-12 col-md-12 col-sm-12  ps-0 ">
+                        <li class="pt-lg-1">
+                            <div class="card mx-2 shadow-lg" style="border:3px solid #fff">
+                                <img src="images/lamp-charge.png" style="max-width: 124px;" class="pb-5 ps-3 pt-3" />
+                                <div class="card-body px-3 py-3">
+                                    <h5 class="card-title">Proactive Communication Framework</h5>
+                                    <p class="card-text lh-base fs-smaller" style="font-size: small;">
+                                        With Finanta, borrowers receive timely reminders and statements, fostering a
+                                        proactive communication ecosystem that upholds payment discipline and nurtures
+                                        lender-borrower rapport.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <ul class="col-lg-12 col-md-12 col-sm-12 ps-0">
+                        <li>
+                            <div class="card mx-2 shadow-lg" style="border:3px solid #fff">
+                                <img src="images/command-square.png" style="max-width: 124px;" class="pb-5 ps-3 pt-3" />
+                                <div class="card-body px-3 py-3">
+                                    <h5 class="card-title">
+                                        Adaptive Loan Lifecycle Adjustments </h5>
+                                    <p class="card-text lh-base" style="font-size: small;">
+                                        Our system dynamically responds to change, managing loan modifications and
+                                        renewals with the finesse required for both lender benefit and borrower
+                                        satisfaction.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="col-lg-12 col-md-12 col-sm-12 ps-0">
+                        <li>
+                            <div class="card mx-2 shadow-lg" style="border:3px solid #fff">
+                                <img src="images/dollar-square.png" style="max-width: 124px;" class="pb-5 ps-3 pt-3" />
+                                <div class="card-body px-3 py-3">
+                                    <h5 class="card-title">In-Depth Financial Oversight</h5>
+                                    <p class="card-text lh-base" style="font-size: small;">
+                                        Finanta's platform offers a comprehensive suite of tools for detailed monitoring
+                                        and reporting on loan performance, ensuring lenders have a full spectrum view of
+                                        their portfolio's health.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <div class="container-fluid p-5" style=" background: #EAEFF0;  background-size: 100%;">
+
+        <div class="container-fluid p-5 ">
+
+            <div class="row justify-content-center align-items-start rounded-3">
+
+                <div class="col-lg-6 text-lg-start text-md-center text-center">
+                    <h2 class="fw-bold mb-3">
+                        Key Features of Finanta’s Loan Servicing Module
+                    </h2>
+                    <div class="row g-0">
+                        <div class="col-6 pe-0">
+                            <div class="row">
+                                <div class="col-lg-12 pe-0">
+                                    <div id="rounded-rect-1" class="rounded-rect mb-3 d-flex flex-column justify-content-start align-items-start pt-5 px-2 mx-0 position-relative" style="height: 200px;">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">Dynamic Draw Schedules & Request Management</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 pe-0">
+                                    <div id="rounded-rect-2" class="rounded-rect mb-3 d-flex flex-columnjustify-content-start align-items-start pt-5 px-2 py-2 position-relative" style="height: 200px;">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">Flexibility in Loan Management</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 ps-0">
+                            <div class="row">
+                                <div class="col-12 ps-0">
+                                    <div  id="rounded-rect-3" class="rounded-rect mb-3 d-flex flex-column justify-content-start align-items-start pt-5 px-2 position-relative" style="height: 200px;">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">Exception Handling with Finesse </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 ps-0">
+                                    <div id="rounded-rect-4" class="rounded-rect mb-3 d-flex flex-column justify-content-start align-items-start pt-5 px-2 position-relative" style="height: 200px;">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">Borrower Empowerment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+                <div class="col-lg-5 p-0 ">
+                    <img src="images/loanservice-key.png" class="img-fluid"  style="width: 95%;"/>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <div class="container-fluid d-flex flex-column align-items-center"
+        style="background: #015f56; background-size: 100%; color: #ffffff">
+        <div class="container-xl p-5 mt-3">
+            <h2 class="col-lg-8 lh-1 fw-bold  mx-auto text-center">
+                Enhanced Borrower Engagment: A 360° Digital Experience 
+            </h2>
+            <p class="col-lg-8 lh-base mx-auto mt-4" style="font-size: 16px;">
+                Finanta's Loan Servicing module reimagines borrower interactions, creating a truly digital, 360-degree
+                experience that places customer satisfaction at the heart of every transaction. Our comprehensive
+                customer management system not only streamlines loan disbursement but also crafts a journey of
+                transparency, responsiveness, and personalized service. 
+            </p>
+        </div>
+
+        <div class="container-xl d-flex">
+            <ul class="col-lg-4 p-4">
+                <li><img src="images/cloud-change.png" alt="" class="pb-3"></li>
+                <li class="fw-bold lh-2 mb-3 fs-5">Intuitive Customer Portal </li>
+                <li class="fw-light" style="font-size: 14px;">A central hub where borrowers can manage their loans, view
+                    amortization schedules,
+                    and communicate
+                    with lenders, delivering a cohesive and empowering user experience. </li>
+            </ul>
+
+            <ul class="col-lg-4 p-4">
+                <li><img src="images/data.png" alt="" class="pb-3"></li>
+                <li class="fw-bold lh-2 mb-3 fs-5">Smart Data Collection </li>
+                <li class="fw-light" style="font-size: 14px;">Leveraging Open Banking APIs, Finanta enriches the
+                    lender’s understanding of each
+                    borrower, enabling personalized loan terms and targeted communication that resonates with the
+                    borrower's unique financial narrative</li>
+            </ul>
+
+            <ul class="col-lg-4 p-4">
+                <li><img src="images/card-send.png" alt="" class="pb-3"></li>
+                <li class="fw-bold lh-2 mb-3 fs-5">In-Flight Loan Modification</li>
+                <li class="fw-light" style="font-size: 14px;">Agile adjustment of loan terms based on real-time borrower
+                    evaluations and changing
+                    market conditions, balancing borrower needs with portfolio risk. </li>
+            </ul>
+        </div>
+
+        <div class="container-xl d-flex mb-5">
+            <ul class="col-lg-4 p-4">
+                <li><img src="images/like-shapes-green.png" alt="" class="pb-3" /></li>
+                <li class="fw-bold lh-2 mb-3 fs-5">Resposive, Multi-Channel Support</li>
+                <li class="fw-light" style="font-size: 14px;">A central hub where borrowers can manage their loans, view
+                    amortization schedules,
+                    and communicate
+                    with lenders, delivering a cohesive and empowering user experience.</li>
+            </ul>
+
+            <ul class="col-lg-4 p-4">
+                <li><img src="images/like-shapes-green.png" alt="" class="pb-3" /></li>
+                <li class="fw-bold lh-2 mb-3 fs-5">Real-Time Information Alerts</li>
+                <li class="fw-light" style="font-size: 14px;">Leveraging Open Banking APIs, Finanta enriches the
+                    lender's understanding of each
+                    borrower, enabling personalized loan terms and targeted communication that resonates with the
+                    borrower's unique financial narrative</li>
+            </ul>
+
+            <ul class="col-lg-4 p-4">
+                <li><img src="images/security-time.png" alt="" class="pb-3" /></li>
+                <li class="fw-bold lh-2 mb-3 fs-5">Post-Funding Credit Monitoring</li>
+                <li class="fw-light" style="font-size: 14px;">
+                    Ongoing surveillance of credit risk post-funding, providing lenders with the insights needed to
+                    anticipate and mitigate potential issues before they arise.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container-fluid bg-white p-5" style=" background: #fff;  background-size: 100%;">
+
+        <div class="container-fluid px-5 my-5">
+            <div class="row justify-content-evenly align-items-center rounded-3">
+                <div class="col-lg-5 p-0 ">
+                    <img src="images/loanservice-future.png" class="img-fluid w-100" />
+                </div>
+                <div class="col-lg-5 pt-sm-5 text-lg-start text-md-center text-center">
+                    <h2 class=" lh-1 fw-bold pb-3">
+                      Redefining Loan Servicing for the Future
+                    </h2>
+                    <p class="lead fw-light lh-base pb-3" style="font-size: 16px;">
+                      Finanta's Loan Servicing module is designed not just to meet but to exceed the evolving demands of commercial lending. From initial disbursement to the final payment, and through every modification in between, Finanta ensures that every step is taken with precision, foresight, and the ultimate goal of fostering lasting customer relationships and financial success.
+                    </p>
+
+                    <div
+                        class="d-grid gap-2 d-md-flex justify-content-lg-start justify-content-md-center justify-content-center mb-4 mb-lg-3">
+                        <a href="bookademo.html" class="cta">Explore More </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid d-flex flex-column align-items-center"
+        style="background:url('images/insights-bg.svg') no-repeat #015f56; background-size: 100%; color: #ffffff">
+        <div class="container-xl my-5">
+            <div class="d-flex justify-content-center align-items-center flex-column ">
+
+
+                <h2 class="mt-2 text-center px-5-lg pt-5 col-lg-8 fw-bold">Transform your loan servicing with Finanta's
+                    intelligent platform. Connect with us for a comprehensive demonstration.</h2>
+
+            </div>
+
+            <div class="d-flex justify-content-center pb-3 mt-3">
+                <a class="cta-secondary bg-white" style="font-size: 16px; color:#015f56">Connect with Us</a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div
+    class="container-fluid d-flex align-items-center"
+    style="background: #f2f2f2"
+  >
+    <div
+      class="container-xl py-5 d-flex justify-content-center flex-column"
+      style="min-height: 100vh"
+    >
+      <div class="d-flex align-items-center flex-column mt-4">
+        <h4 class="mb-4 text-center col-lg-4 col-sm-12 col-xs-12 fw-bold">
+          An All Encompassing Commercial Lending Suite
+        </h4>
+      </div>
+
+      <div class="container-fluid">
+        <div class="d-flex flex-nowrap overflow-auto my-3 encompass">
+          <ul class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/loanorig.svg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"><a href="los-underwriting.html">Loan Origination</a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta revolutionizes loan origination by streamlining client
+                inquiries and pre-qualification, while automating application
+                processes for a global lending solutions.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/digicredit.svg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 5 class="fw-bold my-3"><a href="digital-credit.html">Digital Credit Presentation</a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta transforms loan approvals by seamlessly compiling and presenting loan proposals using advanced digital tools for informed decision-making.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/compliance.svg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"> <a href="regulatory-compliance.html">Compliance Checks </a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta ensures impeccable compliance with automated KYC and anti-money laundering systems, adhering to regulatory and internal policies effortlessly.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/loanservicing.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"><a href="loan-servicing.html">Loan Servicing</a></h5>
+            </li>
+            <li>
+              <span>
+                Revitalize loan servicing with Finanta's efficient fund
+                disbursement, real-time payment monitoring, and enhanced
+                customer support through a comprehensive digital approach.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/loanportfolio.svg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"><a href="loan-portfolio.html">Loan Portfolio Management</a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta excels in loan portfolio management by offering
+                advanced tools for performance monitoring, risk management,
+                and adaptive portfolio restructuring.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/asset.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"><a href="collateral-management.html">Asset & Collateral Management</a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta secures assets and collateral through rigorous
+                valuation and management, ensuring legal compliance and asset
+                integrity throughout the loan term.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/reports.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3">Reporting & Analytics</h5>
+            </li>
+            <li>
+              <span>
+                Finanta unlocks business insights with customizable reporting
+                and advanced analytics, integrating with BI tools for
+                comprehensive loan performance and market analysis.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/marketplace.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3">Marketplace Services Integration</h5>
+            </li>
+            <li>
+              <span>
+                Finanta amplifies lending operations with smart third-party
+                integrations and fintech collaborations, leveraging advanced
+                technologies for a competitive edge.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/postfunding.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3">Post Funding</h5>
+            </li>
+            <li>
+              <span>
+                Optimize post-funding operations with Finanta's integrated
+                solution, expertly managing draws, inspections, and
+                collateral, while vigilantly tracking exceptions and
+                monitoring financial activities for a fully secured lending
+                portfolio.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background: #fff">
+    <div class="container-xl py-5">
+      <div class="mt-4 text-center">
+        <h4 class="mb-4">Latest Blog</h4>
+      </div>
+
+      <div
+        class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-center"
+      >
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+          <div class="card">
+            <img src="images/card1.svg" class="img-fluid" />
+            <div class="card-body px-0 py-2">
+              <span class="fw-smaller py-2">Alec Whitten • 17 Jan 2022</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">
+                  <a
+                    href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers.html"
+                    style="all: unset; cursor: pointer"
+                  >
+                    Seven Innovative Strategies for Smaller Commercial Banks
+                    to
+                    <br />
+                    De-risk Borrowers
+                  </a>
+                </h5>
+                <div
+                  class="d-flex flex-column"
+                  style="height: 12px; width: 12px"
+                >
+                  <img src="images/right-arrow.png" class="img" />
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 py-2">
+              <p>
+                In a world increasingly driven by technology, data, and
+                digital marketing...
+              </p>
+            </div>
+            <div class="card-body px-0 py-2">
+              <a href="#" class="tag tag-maroon">Leadership</a>
+              <a href="#" class="tag tag-grey">Management</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+          <div class="card">
+            <img src="images/card2.svg" class="img-fluid" />
+            <div class="card-body px-0 py-2">
+              <span class="fw-smaller py-2"
+                >Demi WIlkinson • 16 Jan 2022</span
+              >
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">
+                  <a
+                    href="/next-generation-credit-decisioning-models.html"
+                    style="all: unset; cursor: pointer"
+                  >
+                    Next-Generation Credit Decisioning Models: A Deep Dive
+                    into Future-Ready Solutions
+                  </a>
+                </h5>
+                <div
+                  class="d-flex flex-column"
+                  style="height: 12px; width: 12px"
+                >
+                  <img src="images/right-arrow.png" class="img" />
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 py-2">
+              <p>
+                The development and application of advanced credit decisioning
+                models are integral...
+              </p>
+            </div>
+            <div class="card-body px-0 py-2">
+              <a href="#" class="tag tag-green">Product</a>
+              <a href="#" class="tag card-link">Research</a>
+              <a href="#" class="tag tag-red">Frameworks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center my-1">
+        <ul>
+          <li style="list-style: none">
+            <a
+              class="cta-secondary"
+              style="color: #546662"
+              href="insights.html"
+              >See More</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="container-fluid d-flex align-items-center" style="background: #f9fafb">
+        <div class="container-xl px-5 py-5 d-flex flex-column w-100" style="min-height: 50vh">
+            <div class="d-flex flex-column align-items-center w-100">
+                <h2 class="text-center col-lg-10 fw-bold">
+                    Finanta has saved us thousands of hours of work and has unlock data
+                    insights we never thought possible.
+                </h2>
+
+                <img src="images/grey-avatar.png" class="img-fluid mt-4" style="width: 50px" />
+                <span class="fw-bold " style="font-size: 18px">Chief Lending Officer at a Regional Bank</span>
+
+                <!--  <img src="images/Logos.svg" class="img-fluid mt-5" /> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex flex-wrap align-items-stretch p-0">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="background: #ff9201">
+            <img src="images/demo-image.jpg" class="img-fluid w-100" />
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 px-5" style="background: #ffffff">
+            <form class="px-4 py-4" id="contact-form">
+                <h4>See a Demo</h4>
+
+                <p>You can reach us anytime via <a href="info@finanta.io">info@finanta.io</a></p>
+
+                <div class="form-group mb-4">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="from_name" id="from_name" required />
+                </div>
+
+                <div class="form-group mb-4">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="user_email" id="user_email" required />
+                </div>
+
+                <div class="form-group mb-4">
+                    <label>Phone No.</label>
+                    <input type="number" class="form-control" name="phone" id="phone" />
+                </div>
+
+                <div class="form-group mb-4">
+                    <label>How can we help?</label>
+                    <textarea class="form-control" rows="3" cols="5" name="message" id="message" required>
+            </textarea>
+                </div>
+                <input type="submit" class="cta" value="Get a Demo" />
+                <div id="success"></div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="container-fluid bg-light d-flex justify-content-between align-items-center py-5" id="footer">
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#footer").load("./footer.html");
+            $("#navigation").load("./navbar.html");
+
+            $("#rounded-rect-1").hover(
+                function () {
+                    $(this).find('.title').text("Finanta's platform ensures a transparent, efficient draw and disbursement process, aligning fund releases with project progress and budgetary controls.");
+                    $(this).css({'font-size':'12px'})
+                }, function () {
+                    $(this).find('.title').text('Dynamic Draw Schedules & Request Management');
+                    $(this).css('font-size', '16px')
+                }
+            );
+
+            $("#rounded-rect-2").hover(
+                function () {
+                    $(this).find('.title').text('Finanta champions adaptability, providing lenders the tools to respond to borrower circumstances with loan modifications and restructuring, crafted for resilience and risk management.');
+                    $(this).css({'font-size':'12px'})
+                }, function () {
+                    $(this).find('.title').text('Flexibility in Loan Management');
+                    $(this).css('font-size', '16px')
+                }
+            );
+
+            $("#rounded-rect-3").hover(
+                function () {
+                    $(this).find('.title').text("Keep a vigilant eye on collateral values and statuses, and harness advanced reporting tools for strategic insights that drive informed decision-making and portfolio growth. ");
+                    $(this).css({'font-size':'12px'})
+                }, function () {
+                    $(this).find('.title').text('Exception Handling with Finesse ');
+                    $(this).css('font-size', '16px')
+                }
+            );
+
+            $("#rounded-rect-4").hover(
+                function () {
+                    $(this).find('.title').text("The customer portal is a gateway to empowerment, offering borrowers transparency, control, and the confidence to manage their loans with autonomy.");
+                    $(this).css({'font-size':'12px'})
+                }, function () {
+                    $(this).find('.title').text("Borrower Empowerment");
+                    $(this).css('font-size', '16px')
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

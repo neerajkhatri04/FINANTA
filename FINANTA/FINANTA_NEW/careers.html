@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Rahul Banerjee" />
+  <title>Finanta</title>
+
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    .accordion-icon {
+      float: right;
+    }
+
+    .accordion .card {
+      background: #FFFFFF;
+      color: #052421;
+      margin-bottom: 20px;
+      border-radius: 15px;
+
+    }
+
+
+    .accordion .card button {
+
+      background: transparent;
+      color: #052421;
+      margin-bottom: 0px;
+      font-weight: bold;
+    }
+
+    .btn-check:focus+.btn,
+    .btn:focus {
+      box-shadow: none;
+    }
+
+    .card-text {
+      min-height: 6em;
+      /* Adjust based on your font size and line height */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      line-height: 1.5;
+      /* Adjust line height as needed */
+    }
+
+    .benefits li {
+      background: url(images/accordion.svg) no-repeat;
+      line-height: 60px;
+      padding-left: 60px;
+      margin-left: -40px;
+      background-position: left center;
+    }
+
+    .card-body ul li{
+      list-style-type: square !important;
+    }
+  </style>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "6M0L1GthrogPmB4ku",
+      });
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var form = document.getElementById("contact-form");
+      var success = document.getElementById("success");
+
+      function resetForm() {
+        form.reset();
+      }
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+            () => {
+              console.log("SUCCESS!");
+              resetForm();
+              success.innerHTML =
+                "<span style='color:green'>Your message has been sent successfully!</span>";
+            },
+            (error) => {
+              console.log("FAILED...", error);
+            }
+          );
+        });
+    };
+  </script>
+  <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+</head>
+
+<body class="bg-landing">
+  <nav class="navbar navbar-expand-lg navbar-light topnav" id="navigation">
+  </nav>
+
+
+  <div class="container-fluid" style="padding: 50px; opacity: 0.8;">
+    <div class="container-xl">
+      <div class="d-flex flex-column align-items-center">
+        <div class="col-lg-6 text-center text-md-center text-center">
+          <h3 class="display-5 lh-1 fw-bold p-3">
+            Unleash Your Potential
+          </h3>
+          <p>
+            Explore exciting career opportunities and experience our vibrant company culture.
+          </p>
+
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-4 mb-lg-3">
+          <a class="cta ">Learn More</a>
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container-fluid my-5 " style="background: #F9FAFB;">
+    <div class="container-xl d-flex flex-column align-items-center ">
+
+      <div class="col-lg-12 pt-5">
+        <h3 class=" lh-1 fw-bold ">
+          Job Openings
+        </h3>
+        <p class="lh-base col-7">
+          At Finanta, we're on a mission to revolutionize commercial lending with cutting-edge technology and innovative
+          solutions. We're looking for passionate individuals to help us drive this change. Explore our current job
+          openings and find your place in shaping the future of finance.
+        </p>
+
+
+      </div>
+      <div class="container-xl my-5">
+        <div class="col-lg-6 d-flex justify-content-center align-items-center mx-auto">
+          <a class="cta-secondary col-lg-4 px-3 text-center mx-3">Recent</a>
+          <a class="cta col-lg-4 text-center">Older</a>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 py-2">
+
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-3">
+          <div class="card p-3 rounded" style="background: #E6EEED;">
+
+            <div class="card-body">
+
+              <h5 class="card-title fw-bold">
+                Marketing Intern
+              </h5>
+              <!-- <span class="fw-smaller py-2">Location</span> -->
+              <p style="font-size: 15px;">
+                <strong>Overview:</strong> Finanta is at the forefront of revolutionizing commercial lending, offering a
+                unique platform tailored to meet the needs of banks, credit unions, and financial institutions. Our
+                innovative approach combines advanced digital integration with precise data-driven decisioning. We are
+                seeking a motivated Product Marketing and Growth Intern to join our dynamic team and contribute to our
+                continued success.
+              </p>
+              <p style="font-size: 15px;">
+                <strong>Duration: </strong> This is a paid internship, requiring a commitment of at least 6 months.
+              </p>
+              <p style="font-size: 15px;"><strong> Responsibilities:</strong></p>
+              <ul>
+                <li><p style="font-size: 15px;">Pursuing or holding an undergraduate degree in Marketing, Business
+                  Administration, Communications, or a related field; an MBA is advantageous.</p>
+                </li>
+                <li><p style="font-size: 15px;">Demonstrated experience in digital marketing, including knowledge of free
+                  and paid channels.</p>
+                </li>
+                <li><p style="font-size: 15px;">Proficiency in marketing tools, including Adobe Creative Suite, and
+                  familiarity with Google Analytics and Tag Manager.</p>
+                </li>
+                <li><p style="font-size: 15px;">Strong analytical skills, with a focus on market research and competitive
+                  analysis.</p>
+                </li>
+                <li><p style="font-size: 15px;">Excellent communication skills, creativity, and problem-solving
+                  capabilities.</p>
+                </li>
+                <li><p style="font-size: 15px;">Proficiency in English; additional language skills are a plus.</p>
+                </li>
+                <li><p style="font-size: 15px;">Demonstrated ability to work autonomously and collaboratively.</p>
+                </li>
+                <li><p style="font-size: 15px;"> Previous experience with CRM and email marketing tools is preferred.</p>
+                </li>
+                <li><p style="font-size: 15px;"> Portfolio submission is encouraged, showcasing relevant work.</p>
+                </li>
+              </ul>
+              <p style="font-size: 15px;"><strong> Learning and Development:</strong></p>
+              <ul>
+                <li>
+                  <p style="font-size: 15px;">Gain practical experience in product marketing and growth strategy within
+                    the fintech sector.</p>
+                </li>
+                <li>
+                  <p style="font-size: 15px;">Acquire knowledge in regulatory compliance and digital marketing
+                    techniques.</p>
+                </li>
+                <li>
+                  <p style="font-size: 15px;">Receive mentorship from experienced marketing professionals in a
+                    supportive learning environment.</p>
+                </li>
+              </ul>
+              <p style="font-size: 15px;"><strong> Company Culture:</strong></p>
+              <ul>
+                <li><p style="font-size: 15px;">At Finanta, innovation, continuous learning, and collaboration are the pillars of our work culture.
+                </p></li>
+                <li><p style="font-size: 15px;">We are dedicated to fostering diversity, inclusion, and a balanced approach to work-life
+                  integration.</p></li>
+              </ul>
+              <p style="font-size: 15px;"><strong>Benefits: </strong></p>
+              <ul>
+                <li><p style="font-size: 15px;">Flexible work-from-home options.</p></li>
+                <li><p style="font-size: 15px;">Comprehensive training and development opportunities.</p></li>
+                <li><p style="font-size: 15px;">A certificate upon successful completion of the internship.</p></li>
+                <li><p style="font-size: 15px;">Potential for a full-time position for outstanding performers.</p></li>
+            </ul>
+              <p class="mt-5"><a href="/contact.html" class="cta">Apply Now</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- <a href="" class="cta-secondary my-5" style="color: #546662;">Learn More</a> -->
+    </div>
+  </div>
+
+
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid d-flex flex-column align-items-center py-5" style="background-color: #ffffff">
+    <div class="container-xl d-flex justify-content-evenly align-items-center mt-4">
+
+
+      <div class="col-lg-4">
+        <h3 class="col-lg-12 fw-bold mx-auto">
+          Discover Your Potential at Finanta
+        </h3>
+        <p class="lh-base" style="font-size: 15px;">Join Finanta to be part of a team that's shaping the future of
+          commercial lending with innovation and expertise. Embrace the opportunity to grow, learn, and make a
+          meaningful impact in a dynamic and supportive environment.</p>
+
+      </div>
+      <div class="col-lg-6">
+        <img src="images/careers-feature.png" alt="" class="img-fluid">
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="container-fluid d-flex align-items-center"
+    style="background:url(images/lines.png) no-repeat; background-size: 100%; background-position: top left; background-color: #E6EEED;">
+    <div class="container-xl px-5 py-5 d-flex flex-column">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+
+
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 px-5">
+          <form class="px-4 py-4" id="contact-form">
+            <h3 class="fw-bold">Contact Us</h3>
+
+            <p>Fill out the form below to get in touch with us.</p>
+            <div id="success"></div>
+            <div class="form-group mb-4">
+              <label>Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" name="from_name" id="from_name" required />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Business Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" name="user_email" id="user_email" required />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Phone No. <span class="text-danger">*</span></label>
+              <input type="number" class="form-control" name="phone" id="phone" required />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Job Title <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" name="jobtitle" id="jobtitle" required />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Company <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" name="company" id="company" required />
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Industry <span class="text-danger">*</span></label>
+              <select class="form-select" id="industry" name="industry" required>
+                <option>Select Industry</option>
+                <option>Bank</option>
+                <option>Credit Union</option>
+                <option>Non-Bank Lender</option>
+                <option>Commercial Real-Estate Lender</option>
+                <option>
+                  Automotive Business Lender</option>
+
+                <option>
+                  Agricultural Equipment Lender</option>
+                <option>
+                  Equipment Leasing & Financing</option>
+
+                <option>
+                  Others</option>
+              </select>
+
+            </div>
+
+            <div class="form-group mb-4">
+              <label>How can we help?</label>
+              <textarea class="form-control" rows="3" cols="5" id="message" name="message"> </textarea>
+            </div>
+            <input type="submit" class="cta col-lg-4" value="Submit" />
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="container-fluid bg-light d-flex justify-content-between align-items-center py-5" id="footer">
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(function () {
+      $("#footer").load("./footer.html");
+      $("#navigation").load("./navbar.html");
+
+      $(".rounded-rect").hover(
+        function () {
+          $(this).find('.title').text('Finanta’s Digital Credit Presentation feature comes equipped with standardized templates that streamline the creation of compelling loan narratives, ensuring consistency and clarity in every credit presentation. ');
+          $(this).css('font-size', '12px')
+        }, function () {
+          $(this).find('.title').text('Standardized Loan Narrative Templates');
+          $(this).css('font-size', '15px')
+        }
+      );
+    });
+  </script>
+</body>
+
+</html>

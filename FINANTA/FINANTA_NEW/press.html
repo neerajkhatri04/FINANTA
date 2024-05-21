@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rahul Banerjee" />
+    <title>Finanta</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .accordion-icon {
+        float: right;
+      }
+
+      .accordion .card {
+        background: #015f56;
+        color: #ffffff;
+        margin-bottom: 20px;
+        border-radius: 15px;
+      }
+
+      .accordion .card button {
+        background: transparent;
+        color: #ffffff;
+        margin-bottom: 0px;
+      }
+
+      .card-text {
+        min-height: 6em;
+        /* Adjust based on your font size and line height */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.5;
+        /* Adjust line height as needed */
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "6M0L1GthrogPmB4ku",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var form = document.getElementById("contact-form");
+        var success = document.getElementById("success");
+
+        function resetForm() {
+          form.reset();
+        }
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+              () => {
+                console.log("SUCCESS!");
+                resetForm();
+                success.innerHTML =
+                  "<span style='color:green'>Your message has been sent successfully!</span>";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+  </head>
+
+  <body class="bg-landing">
+    <nav
+      class="navbar navbar-expand-lg navbar-light topnav"
+      id="navigation"
+    ></nav>
+
+    <div class="container-fluid" style="padding: 50px; opacity: 0.8">
+      <div class="container-xl">
+        <div class="d-flex flex-column align-items-center">
+          <div class="col-lg-6 text-center text-md-center text-center">
+            <h3 class="display-5 lh-1 fw-bold p-3">
+              Welcome to Finanta's Press Room
+            </h3>
+          </div>
+          <p class="col-lg-8 text-center">
+            Explore how Finanta is evolving commercial lending with its
+            innovative software. We're committed to enhancing efficiency,
+            transparency, and security in the industry. Keep informed about our
+            progress and follow our updates in the press as we strive to improve
+            the commercial lending experience.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div
+      class="container-fluid d-flex flex-column align-items-center py-5"
+      style="background-color: #e6eeed"
+    >
+      <div class="container-xl justify-content-center">
+        <h2 class="col-lg-6 fw-bold text-center mx-auto">
+          Stay Updated with Commercial Lending Insights
+        </h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card">
+              <img src="images/blogimg.png" class="img-fluid" />
+              <div class="card-body">
+                <span class="fw-smaller py-2"
+                  >Sailatha Chandrashekhar • 27 Jan 2023</span
+                >
+                <h5 class="card-title">PM mental models</h5>
+                <p>
+                  Mental models are simple expressions of complex processes or
+                  relationships.
+                </p>
+              </div>
+              <div class="card-body">
+                <a href="#" class="card-link">Bank</a>
+                <a href="#" class="card-link">Commercial Lending</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card">
+              <img src="images/blogimg.png" class="img-fluid" />
+              <div class="card-body">
+                <span class="fw-smaller py-2"
+                  >Sailatha Chandrashekhar • 27 Jan 2023</span
+                >
+                <h5 class="card-title">PM mental models</h5>
+
+                <p>
+                  Mental models are simple expressions of complex processes or
+                  relationships.
+                </p>
+              </div>
+              <div class="card-body">
+                <a href="#" class="card-link">Credit Decisioning</a>
+                <a href="#" class="card-link">Lenders</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex align-items-center"
+      style="background: #f9fafb"
+    >
+      <div
+        class="container-xl px-5 py-5 d-flex flex-column"
+        style="min-height: 50vh"
+      >
+        <div class="d-flex flex-column align-items-center">
+          <h4 class="text-center col-lg-8">
+            Finanta has saved us thousands of hours of work and has unlock data
+            insights we never thought possible.
+          </h4>
+
+          <img
+            src="images/grey-avatar.png"
+            class="img-fluid mt-4"
+            style="width: 50px"
+          />
+          <span class="fw-bold" style="font-size: 18px"
+            >Chief Lending Officer at a Regional Bank</span
+          >
+
+          <!--  <img src="images/Logos.svg" class="img-fluid mt-5" /> -->
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex flex-column align-items-center"
+      style="
+        background: url('images/insights-bg.svg') no-repeat #015f56;
+        background-size: 100%;
+        color: #ffffff;
+      "
+    >
+      <div class="container-xl">
+        <div
+          class="d-flex justify-content-center align-items-center flex-column mt-6"
+        >
+          <h2 class="mt-2 text-center px-5-lg pt-5 col-lg-4 fw-bold">
+            Unlock the Power of Commercial Lending
+          </h2>
+          <p class="py-4 col-lg-5 text-center lh-base">
+            Join the Finanta community today and receive cutting-edge insights,
+            trends, and strategies in commercial lending directly to your inbox.
+            Elevate your lending game with our exclusive newsletter.
+          </p>
+        </div>
+
+        <div class="d-flex justify-content-center pb-3">
+          <a class="cta-orange px-3 mx-3" style="font-size: 16px">Subscribe</a>
+          <a class="cta-secondary" style="font-size: 16px">Book a Demo</a>
+        </div>
+
+        <div class="d-flex justify-content-center py-3">
+          <a href="https://twitter.com/Finanta_IO" target="_blank"
+            ><img class="img-fluid mx-3" src="images/x-orange.svg"
+          /></a>
+          <a
+            href="https://www.linkedin.com/company/finanta-inc/"
+            target="_blank"
+            ><img class="img-fluid mx-3" src="images/in-orange.svg"
+          /></a>
+          <img class="img-fluid mx-3" src="images/yt-orange.svg" />
+        </div>
+        <div class="container-fluid my-5">
+          <div class="marquee-container justify-content-center">
+            <!-- Repeat the marquee divs as needed for your content -->
+            <div class="marquee">
+              <img
+                src="images/solutions/moodys.png"
+                class="img-fluid"
+                style="padding-top: 20px"
+              />
+            </div>
+            <div class="marquee">
+              <img src="images/solutions/mxlogo.png" class="img-fluid" />
+            </div>
+            <div class="marquee">
+              <img
+                src="images/solutions/axway.png"
+                class="img-fluid"
+                style="padding-top: 10px"
+              />
+            </div>
+            <div class="marquee">
+              <img
+                src="images/solutions/lexisnexis.png"
+                class="img-fluid"
+                style="padding-top: 30px"
+              />
+            </div>
+            <div class="marquee">
+              <img
+                src="images/solutions/kony.png"
+                class="img-fluid"
+                style="padding-top: 20px"
+              />
+            </div>
+            <div class="marquee">
+              <img
+                src="images/solutions/carleton.png"
+                class="img-fluid"
+                style="padding-top: 0px"
+              />
+            </div>
+
+            <!-- Add more marquee divs as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="container-fluid bg-light d-flex justify-content-between align-items-center py-5"
+      id="footer"
+    ></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function () {
+        $("#footer").load("./footer.html");
+        $("#navigation").load("./navbar.html");
+
+        $(".rounded-rect").hover(
+          function () {
+            $(this)
+              .find(".title")
+              .text(
+                "Finanta’s Digital Credit Presentation feature comes equipped with standardized templates that streamline the creation of compelling loan narratives, ensuring consistency and clarity in every credit presentation. "
+              );
+            $(this).css("font-size", "12px");
+          },
+          function () {
+            $(this)
+              .find(".title")
+              .text("Standardized Loan Narrative Templates");
+            $(this).css("font-size", "15px");
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

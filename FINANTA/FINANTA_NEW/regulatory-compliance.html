@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rahul Banerjee" />
+    <title>Finanta</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <style>
+        .card-text {
+            min-height: 6em;
+            /* Adjust based on your font size and line height */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            line-height: 1.5;
+            /* Adjust line height as needed */
+        }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "6M0L1GthrogPmB4ku",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var form = document.getElementById("contact-form");
+            var success = document.getElementById("success");
+
+            function resetForm() {
+                form.reset();
+            }
+            document
+                .getElementById("contact-form")
+                .addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+                        () => {
+                            console.log("SUCCESS!");
+                            resetForm();
+                            success.innerHTML =
+                                "<span style='color:green'>Your message has been sent successfully!</span>";
+                        },
+                        (error) => {
+                            console.log("FAILED...", error);
+                        }
+                    );
+                });
+        };
+    </script>
+    <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+</head>
+
+<body class="bg-landing">
+    <nav class="navbar navbar-expand-lg navbar-light topnav" id="navigation">
+    </nav>
+
+    <div class="container-xl  mt-5 mb-1">
+        <div class="row align-items-start rounded-3">
+            <div class="col-lg-6 pt-sm-5 text-lg-start text-md-center text-center">
+                <h2 class="display-5 lh-1 fw-bold pb-3">
+                    Ensuring Regulatory Compliance at Every Step
+                </h2>
+                <p class="lead fw-light lh-base pb-3">
+                    Navigate the complexities of commercial lending with confidence. Finanta's Compliance Checks module
+                    delivers the robust oversight your business demands. 
+                </p>
+                <div
+                    class="d-grid gap-2 d-md-flex justify-content-lg-start justify-content-md-center justify-content-center mb-4 mb-lg-3">
+                    <a href="bookademo.html" class="cta">Talk to Our Experts</a>
+
+                </div>
+            </div>
+            <div class="col-lg-6 p-0 ">
+                <img src="images/regu-compliance.png" class="img-fluid"  style="width: 95%;"/>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid bg-white p-5">
+
+        <div class="container-fluid px-5">
+            <div class="row justify-content-center align-items-center rounded-3">
+                <div class="col-lg-6 p-0 ">
+                    <img src="images/riskmanagement.png" class="img-fluid w-100" />
+                </div>
+                <div class="col-lg-5 pt-sm-5 text-lg-start text-md-center text-center">
+                    <h2 class="lh-1 fw-bold pb-3">
+                        Finanta’s Integrated Risk Management Module 
+                    </h2>
+                    <p class="lead fw-light lh-base" style="font-size: 16px;">
+                        In the high-stakes world of commercial lending, regulatory compliance is not just a
+                        requirement—it's the cornerstone of trust and integrity. Finanta's Regulatory Compliance Check
+                        module is engineered to provide comprehensive risk management and compliance solutions that
+                        integrate seamlessly with third-party services for an in-depth credit and risk scoring,
+                        including KYC, OFAC, and document verification. 
+                    </p>
+                    <a href="bookademo.html" class="cta" style="display: block;width: fit-content;">Transform Your Lending Processes </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid d-flex align-items-center" style="background: #F9FAFB">
+        <div class="container-xl py-4 cardcontainer mt-5">
+            <div class="d-flex justify-content-center align-items-center flex-column mt-2">
+                <h2 class="my-4 text-center col-lg-6 col-md-6 col-sm-12 col-xs-12 fw-bold">
+                    Finanta’s Unwavering Commitment to Compliance 
+                </h2>
+            </div>
+
+
+            <div class="d-flex justify-content-center align-items-stretch my-5 pb-4">
+                <ul class="col-lg-4 col-md-12 col-sm-12 ps-0">
+                    <li class="pt-lg-1 d-flex">
+                        <div class="card mx-2 shadow-lg" style="border:3px solid #fff ;height: 20rem;overflow: hidden;">
+                            <img src="images/danger-icon.png" style="max-width: 124px;" class="pb-5 ps-3 pt-3" />
+                            <div class="card-body px-3 py-3">
+                                <h5 class="card-title">Rigorous Risk Management</h5>
+                                <p class="card-text lh-base" style="font-size: small;">
+                                    Employing a wide array of risk rating models, Finanta offers thorough risk
+                                    assessments to accurately evaluate borrower creditworthiness and monitor portfolio
+                                    risk.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="col-lg-4 col-md-12 col-sm-12 ps-0">
+                    <li class="pt-lg-1 d-flex">
+                        <div class="card mx-2 shadow-lg" style="border:3px solid #fff; height: 20rem;overflow: hidden;">
+                            <img src="images/device-message-icon.png" style="max-width: 124px;"
+                                class="pb-5 ps-3 pt-3" />
+                            <div class="card-body px-3 py-3">
+                                <h5 class="card-title">Real-Time Regulatory Vigilance</h5>
+                                <p class="card-text lh-base fs-smaller" style="font-size: small;">
+                                    With real-time monitoring and reporting, stay ahead of regulatory requirements with
+                                    our automated AML and KYC checks.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="col-lg-4 col-md-12 col-sm-12 ps-0">
+                    <li class="pt-lg-1 d-flex">
+                        <div class="card mx-2 shadow-lg" style="border:3px solid #fff ; height: 20rem;overflow: hidden;">
+                            <img src="images/search-status-icon.png" style="max-width: 124px;" class="pb-5 ps-3 pt-3" />
+                            <div class="card-body px-3 py-3">
+                                <h5 class="card-title">Advanced Due Diligence</h5>
+                                <p class="card-text lh-base fs-smaller" style="font-size: small;">
+                                    Our module extends beyond individual
+                                    compliance, encompassing KYB for
+                                    comprehensive corporate due diligence,
+                                    ensuring every aspect of your lending
+                                    process adheres to the highest standards
+                                    of compliance.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <div class="container-fluid p-5" style=" background: #EAEFF0;  background-size: 100%;">
+
+        <div class="container-fluid p-5 ">
+
+            <div class="row align-items-start rounded-3">
+
+                <div class="col-lg-6 text-lg-start text-md-center text-center">
+                    <h2 class="fw-bold">
+                        Key Features Tailored to Your Unique Requirements
+                    </h2>
+                    <div class="row">
+                        <div class="col-6 pe-0">
+                            <div class="row">
+                                <div class="col-12 pe-0">
+                                    <div  id="rounded-rect-1"
+                                        class="rounded-rect mb-3 d-flex flex-column flex-column justify-content-start align-items-start pt-5 px-2 position-relative">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">Advanced Risk Analysis</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 pe-0">
+                                    <div id="rounded-rect-2"
+                                        class="rounded-rect mb-3 d-flex flex-column flex-column justify-content-start align-items-start pt-5 px-2 position-relative">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">AML Compliant and
+                                            Full Risk Report</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 ps-0">
+
+                            <div class="row">
+                                <div class="col-12 ps-0">
+                                    <div id="rounded-rect-3"
+                                        class="rounded-rect mb-3 d-flex flex-column flex-column justify-content-start align-items-start pt-5 px-2 position-relative">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">Company
+                                            Documentation and
+                                            Continuous Update</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 ps-0">
+                                    <div id="rounded-rect-4"
+                                        class="rounded-rect mb-3 d-flex flex-column flex-column justify-content-start align-items-start pt-5 px-2 position-relative">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">LEI and Tax ID
+                                            Verification</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6">
+
+                            <div class="row">
+                                <div class="col-12 pe-0">
+                                    <div id="rounded-rect-5"
+                                        class="rounded-rect mb-3 d-flex flex-column flex-column justify-content-start align-items-start pt-5 px-2 position-relative">
+                                        <span><img src="images/plus-circle.png" /></span>
+                                        <span class="title" style="font-weight: bold;">Detailed
+                                            Investigation and
+                                            Full Audit Trail</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 p-0 ">
+                    <img src="images/regu-key.png" class="img-fluid w-100" />
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <div class="container-fluid bg-white p-5" style=" background: #fff;  background-size: 100%;">
+
+        <div class="container-fluid px-5 my-5">
+            <div class="row justify-content-evenly align-items-center rounded-3">
+                <div class="col-lg-6 p-0 ">
+                    <img src="images/regu-future.png" class="img-fluid w-100" />
+                </div>
+                <div class="col-lg-5 pt-sm-5 text-lg-start text-md-center text-center">
+                    <h2 class=" lh-1 fw-bold pb-3">
+                        Finanta's Strategic Toolkit for Regulatory Assurance  
+                    </h2>
+                    <p class="lead fw-light lh-base pb-3" style="font-size: 16px;">
+                        By integrating Finanta's Compliance Checks into your lending operations, you take control of
+                        regulatory risks and ensure compliance with ease and efficiency. Our platform is a critical ally
+                        in navigating the intricate compliance landscape of commercial lending, providing the tools you
+                        need to focus on growth and customer service. 
+                    </p>
+
+                    <div
+                        class="d-grid gap-2 d-md-flex justify-content-lg-start justify-content-md-center justify-content-center mb-4 mb-lg-3">
+                        <a href="bookademo.html" class="cta">Explore More </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid d-flex flex-column align-items-center"
+        style="background:url('images/insights-bg.svg') no-repeat #015f56; background-size: 100%; color: #ffffff">
+        <div class="container-xl">
+            <div class="d-flex justify-content-center align-items-center flex-column mt-5">
+                <h2 class="mt-2 text-center px-5-lg pt-5 col-lg-8 fw-bold">Connect with Finanta today and revolutionize your compliance strategy.  </h2>
+                </div>
+
+            <div class="d-flex justify-content-center pb-5 mb-5 mt-2">
+                <a class="cta-secondary bg-white" style="font-size: 16px; color:#015f56">Schedule a Demo </a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div
+    class="container-fluid d-flex align-items-center"
+    style="background: #f2f2f2"
+  >
+    <div
+      class="container-xl py-5 d-flex justify-content-center flex-column"
+      style="min-height: 100vh"
+    >
+      <div class="d-flex align-items-center flex-column mt-4">
+        <h4 class="mb-4 text-center col-lg-4 col-sm-12 col-xs-12 fw-bold">
+          An All Encompassing Commercial Lending Suite
+        </h4>
+      </div>
+
+      <div class="container-fluid">
+        <div class="d-flex flex-nowrap overflow-auto my-3 encompass">
+          <ul class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/loanorig.svg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"><a href="los-underwriting.html">Loan Origination</a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta revolutionizes loan origination by streamlining client
+                inquiries and pre-qualification, while automating application
+                processes for a global lending solutions.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/digicredit.svg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 5 class="fw-bold my-3"><a href="digital-credit.html">Digital Credit Presentation</a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta transforms loan approvals by seamlessly compiling and presenting loan proposals using advanced digital tools for informed decision-making.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/compliance.svg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"> <a href="regulatory-compliance.html">Compliance Checks </a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta ensures impeccable compliance with automated KYC and anti-money laundering systems, adhering to regulatory and internal policies effortlessly.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/loanservicing.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"><a href="loan-servicing.html">Loan Servicing</a></h5>
+            </li>
+            <li>
+              <span>
+                Revitalize loan servicing with Finanta's efficient fund
+                disbursement, real-time payment monitoring, and enhanced
+                customer support through a comprehensive digital approach.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/loanportfolio.svg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"><a href="loan-portfolio.html">Loan Portfolio Management</a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta excels in loan portfolio management by offering
+                advanced tools for performance monitoring, risk management,
+                and adaptive portfolio restructuring.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/asset.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3"><a href="collateral-management.html">Asset & Collateral Management</a></h5>
+            </li>
+            <li>
+              <span>
+                Finanta secures assets and collateral through rigorous
+                valuation and management, ensuring legal compliance and asset
+                integrity throughout the loan term.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/reports.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3">Reporting & Analytics</h5>
+            </li>
+            <li>
+              <span>
+                Finanta unlocks business insights with customizable reporting
+                and advanced analytics, integrating with BI tools for
+                comprehensive loan performance and market analysis.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/marketplace.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3">Marketplace Services Integration</h5>
+            </li>
+            <li>
+              <span>
+                Finanta amplifies lending operations with smart third-party
+                integrations and fintech collaborations, leveraging advanced
+                technologies for a competitive edge.
+              </span>
+            </li>
+          </ul>
+
+          <ul class="col-lg-4 col-sm-12 col-xs-12 mx-sm-2">
+            <li>
+              <img src="images/postfunding.jpg" class="img-fluid w-100" />
+            </li>
+            <li>
+              <h5 class="fw-bold my-3">Post Funding</h5>
+            </li>
+            <li>
+              <span>
+                Optimize post-funding operations with Finanta's integrated
+                solution, expertly managing draws, inspections, and
+                collateral, while vigilantly tracking exceptions and
+                monitoring financial activities for a fully secured lending
+                portfolio.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background: #fff">
+    <div class="container-xl py-5">
+      <div class="mt-4 text-center">
+        <h4 class="mb-4">Latest Blog</h4>
+      </div>
+
+      <div
+        class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-center"
+      >
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+          <div class="card">
+            <img src="images/card1.svg" class="img-fluid" />
+            <div class="card-body px-0 py-2">
+              <span class="fw-smaller py-2">Alec Whitten • 17 Jan 2022</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">
+                  <a
+                    href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers.html"
+                    style="all: unset; cursor: pointer"
+                  >
+                    Seven Innovative Strategies for Smaller Commercial Banks
+                    to
+                    <br />
+                    De-risk Borrowers
+                  </a>
+                </h5>
+                <div
+                  class="d-flex flex-column"
+                  style="height: 12px; width: 12px"
+                >
+                  <img src="images/right-arrow.png" class="img" />
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 py-2">
+              <p>
+                In a world increasingly driven by technology, data, and
+                digital marketing...
+              </p>
+            </div>
+            <div class="card-body px-0 py-2">
+              <a href="#" class="tag tag-maroon">Leadership</a>
+              <a href="#" class="tag tag-grey">Management</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+          <div class="card">
+            <img src="images/card2.svg" class="img-fluid" />
+            <div class="card-body px-0 py-2">
+              <span class="fw-smaller py-2"
+                >Demi WIlkinson • 16 Jan 2022</span
+              >
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">
+                  <a
+                    href="/next-generation-credit-decisioning-models.html"
+                    style="all: unset; cursor: pointer"
+                  >
+                    Next-Generation Credit Decisioning Models: A Deep Dive
+                    into Future-Ready Solutions
+                  </a>
+                </h5>
+                <div
+                  class="d-flex flex-column"
+                  style="height: 12px; width: 12px"
+                >
+                  <img src="images/right-arrow.png" class="img" />
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 py-2">
+              <p>
+                The development and application of advanced credit decisioning
+                models are integral...
+              </p>
+            </div>
+            <div class="card-body px-0 py-2">
+              <a href="#" class="tag tag-green">Product</a>
+              <a href="#" class="tag card-link">Research</a>
+              <a href="#" class="tag tag-red">Frameworks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center my-1">
+        <ul>
+          <li style="list-style: none">
+            <a
+              class="cta-secondary"
+              style="color: #546662"
+              href="insights.html"
+              >See More</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="container-fluid d-flex align-items-center" style="background: #f9fafb">
+        <div class="container-xl px-5 py-5 d-flex flex-column" style="min-height: 50vh">
+            <div class="d-flex flex-column align-items-center">
+                <h2 class="text-center col-lg-10 fw-bold">
+                    Finanta has saved us thousands of hours of work and has unlock data
+                    insights we never thought possible.
+                </h2>
+
+                <img src="images/grey-avatar.png" class="img-fluid mt-4" style="width: 50px" />
+                <span class="fw-bold " style="font-size: 18px">Chief Lending Officer at a Regional Bank</span>
+
+                <!--  <img src="images/Logos.svg" class="img-fluid mt-5" /> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex flex-wrap align-items-stretch p-0">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="background: #ff9201">
+            <img src="images/demo-image.jpg" class="img-fluid w-100" />
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 px-5" style="background: #ffffff">
+            <form class="px-4 py-4" id="contact-form">
+                <h4>See a Demo</h4>
+
+                <p>You can reach us anytime via <a href="info@finanta.io">info@finanta.io</a></p>
+
+                <div class="form-group mb-4">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="from_name" id="from_name" required />
+                </div>
+
+                <div class="form-group mb-4">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="user_email" id="user_email" required />
+                </div>
+
+                <div class="form-group mb-4">
+                    <label>Phone No.</label>
+                    <input type="number" class="form-control" name="phone" id="phone" />
+                </div>
+
+                <div class="form-group mb-4">
+                    <label>How can we help?</label>
+                    <textarea class="form-control" rows="3" cols="5" name="message" id="message" required>
+            </textarea>
+                </div>
+                <input type="submit" class="cta" value="Get a Demo" />
+                <div id="success"></div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="container-fluid bg-light d-flex justify-content-between align-items-center py-5" id="footer">
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#footer").load("./footer.html");
+            $("#navigation").load("./navbar.html");
+
+            $("#rounded-rect-1").hover(
+                function () {
+                    $(this).find('.title').text('Finanta provides meticulous registry checks to ensure all regulatory requirements are met, along with Ultimate Beneficial Owner (UBO) detection to maintain transparency and comply with global regulations.');
+                    $(this).css('font-size', '12px')
+                }, function () {
+                    $(this).find('.title').text('Advanced Risk Analysis');
+                    $(this).css('font-size', '15px')
+                }
+            );
+
+            $("#rounded-rect-2").hover(
+                function () {
+                    $(this).find('.title').text('Stay compliant with anti-money laundering directives with our AML tools, and gain a complete overview of potential risks with comprehensive reporting capabilities.');
+                    $(this).css('font-size', '12px')
+                }, function () {
+                    $(this).find('.title').text('AML Compliant and Full Risk Report');
+                    $(this).css('font-size', '15px')
+                }
+            );
+
+            $("#rounded-rect-3").hover(
+                function () {
+                    $(this).find('.title').text("Keep your corporate documentation in check and regularly updated, ensuring your records reflect the latest compliance status and regulatory information.");
+                    $(this).css('font-size', '12px')
+                }, function () {
+                    $(this).find('.title').text('Company Documentation and Continuous Update');
+                    $(this).css('font-size', '15px')
+                }
+            );
+
+            $("#rounded-rect-4").hover(
+                function () {
+                    $(this).find('.title').text("Validate the legal entity identifier (LEI) and Tax ID with precision, streamlining due diligence processes and verifying the identity of entities effectively.");
+                    $(this).css('font-size', '12px')
+                }, function () {
+                    $(this).find('.title').text("LEI and Tax ID Verification");
+                    $(this).css('font-size', '15px')
+                }
+            );
+
+            $("#rounded-rect-5").hover(
+                function () {
+                    $(this).find('.title').text("Conduct in-depth investigations with ease and maintain a full audit trail for unparalleled insight and audit readiness.");
+                    $(this).css('font-size', '12px')
+                }, function () {
+                    $(this).find('.title').text('Detailed Investigation and Full Audit Trail');
+                    $(this).css('font-size', '15px')
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>
