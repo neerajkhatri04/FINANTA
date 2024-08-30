@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Schedule a demo with Finanta to discover our powerful lending solutions. Visit our Book Demo page to arrange a personalized demonstration."
+    />
+    <meta name="keywords" content="Book Demo" />
     <meta name="author" content="Rahul Banerjee" />
-    <title>Finanta</title>
+    <title>Book Demo | Finanta</title>
 
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,6 +55,9 @@
                 resetForm();
                 success.innerHTML =
                   "<span style='color:green'>Your message has been sent successfully!</span>";
+
+                // Redirect to the thank you page
+                window.location.href = "bookdemo-thank-you.html";
               },
               (error) => {
                 console.log("FAILED...", error);
@@ -185,17 +192,21 @@
         </div>
 
         <div
-          class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-center"
+          class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-start"
         >
           <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
             <div class="card">
-              <img src="images/card1.svg" class="img-fluid" />
+              <a
+                href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers"
+              >
+                <img src="images/card1.svg" class="img-fluid" />
+              </a>
               <div class="card-body px-0 py-2">
                 <span class="fw-smaller py-2">Alec Whitten • 17 Jan 2022</span>
                 <div class="d-flex justify-content-between align-items-center">
                   <h5 class="card-title">
                     <a
-                      href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers.html"
+                      href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers"
                       style="all: unset; cursor: pointer"
                     >
                       Seven Innovative Strategies for Smaller Commercial Banks
@@ -227,7 +238,9 @@
 
           <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
             <div class="card">
-              <img src="images/card2.svg" class="img-fluid" />
+              <a href="/next-generation-credit-decisioning-models">
+                <img src="images/card2.svg" class="img-fluid" />
+              </a>
               <div class="card-body px-0 py-2">
                 <span class="fw-smaller py-2"
                   >Demi WIlkinson • 16 Jan 2022</span
@@ -235,7 +248,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <h5 class="card-title">
                     <a
-                      href="/next-generation-credit-decisioning-models.html"
+                      href="/next-generation-credit-decisioning-models"
                       style="all: unset; cursor: pointer"
                     >
                       Next-Generation Credit Decisioning Models: A Deep Dive
@@ -263,6 +276,91 @@
               </div>
             </div>
           </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card">
+              <a href="/commercial-lending-trends">
+                <img src="images/card3.svg" class="img-fluid" />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 28 Aug 2024</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/commercial-lending-trends"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Commercial Lending Trends: The Need for A Complete
+                      Platform
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  The pandemic changed how businesses operated. Restaurants,
+                  malls,...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card">
+              <a href="/commercial-lending-trends">
+                <img
+                  src="images/card4.avif"
+                  class="img-fluid"
+                  style="border-radius: 10px"
+                />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 29 Aug 2024</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/commercial-lending-trends"
+                      style="all: unset; cursor: pointer"
+                    >
+                      An Introduction to Commercial Lending in the US
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  A commercial loan is a debt instrument advanced to support
+                  business activity and growth...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="d-flex justify-content-center my-1">
@@ -271,7 +369,7 @@
               <a
                 class="cta-secondary"
                 style="color: #546662"
-                href="insights.html"
+                href="commercial-lending-insights"
                 >See More</a
               >
             </li>

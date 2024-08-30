@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Get in touch with Finanta for inquiries, support, or partnership opportunities. Visit our Contact Us page for quick and easy communication."
+    />
+    <meta name="keywords" content="Contact Us" />
     <meta name="author" content="Rahul Banerjee" />
-    <title>Finanta</title>
+    <title>Contact Us | Finanta</title>
 
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,6 +53,9 @@
                 resetForm();
                 success.innerHTML =
                   "<span style='color:green'>Your message has been sent successfully!</span>";
+
+                // Redirect to the thank you page
+                window.location.href = "contactus-thank-you.html";
               },
               (error) => {
                 console.log("FAILED...", error);
@@ -75,9 +82,7 @@
           </h3>
           <p
             class="lead text-center px-xs-0 px-lg-5 lh-base"
-            style="
-              font-size: 14px;
-                "
+            style="font-size: 14px"
           >
             We at Finanta are always eager to connect with you. Whether you have
             questions about our commercial lending solutions, need assistance
@@ -338,6 +343,3 @@
     </script>
   </body>
 </html>
-
-
-

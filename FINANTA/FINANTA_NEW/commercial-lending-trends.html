@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rahul Banerjee" />
+    <title>Finanta</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .accordion-icon {
+        float: right;
+      }
+
+      .accordion .card {
+        background: #015f56;
+        color: #ffffff;
+        margin-bottom: 20px;
+        border-radius: 15px;
+      }
+
+      .accordion .card button {
+        background: transparent;
+        color: #ffffff;
+        margin-bottom: 0px;
+      }
+
+      .card-text {
+        min-height: 6em;
+        /* Adjust based on your font size and line height */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.5;
+        /* Adjust line height as needed */
+      }
+
+      .card button {
+        text-align: left;
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "6M0L1GthrogPmB4ku",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var form = document.getElementById("contact-form");
+        var success = document.getElementById("success");
+
+        function resetForm() {
+          form.reset();
+        }
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+              () => {
+                console.log("SUCCESS!");
+                resetForm();
+                success.innerHTML =
+                  "<span style='color:green'>Your message has been sent successfully!</span>";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+  </head>
+
+  <body class="">
+    <nav
+      class="navbar navbar-expand-lg navbar-light topnav bg-landing"
+      id="navigation"
+    ></nav>
+
+    <div
+      class="container-fluid"
+      style="
+        background-image: url('images/blogbg.png');
+        background-size: cover;
+        background-position: left center;
+        padding: 200px;
+        opacity: 0.8;
+      "
+    >
+      <div class="container-xl">
+        <div class="d-flex flex-column align-items-center">
+          <div class="col-lg-12 text-center text-md-center text-center">
+            <h3 class="display-5 lh-1 fw-bold p-3 text-white">
+              Commercial Lending Trends: The Need for A Complete Platform
+            </h3>
+
+            <div class="d-flex justify-content-center col-lg-3 mx-auto mb-3">
+              <p class="text-white">28 Aug 2024</p>
+              <p class="text-white">&bull;</p>
+              <p class="text-white">15 min read</p>
+            </div>
+
+            <div
+              class="col-lg-12 text-center text-md-center text-center d-flex gap-4 justify-content-center"
+            >
+              <a class="cta bg-white" style="color: #015f56"
+                >Download a resource</a
+              >
+              <a class="cta-secondary text-white"
+                >Explore our other blog posts</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid my-5">
+      <div class="container-xl d-flex">
+        <div style="width: 326px">
+          <ul class="sidebar gap-1">
+            <li class="me-4">
+              <p
+                class="font-family-plus-jakarta-sans fw-bold lh-2 text-left"
+                style="font-size: 20px; line-height: 33px; color: #546662"
+              >
+                Table of contents
+              </p>
+            </li>
+            <li class="me-4">
+              <p
+                class="lh-base mb-0 text-nowrap"
+                style="overflow-x: hidden; text-overflow: ellipsis"
+              >
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#costumers-waiting-for-better"
+                  >Are Customers Waiting for Better Lending Conditions?</a
+                >
+              </p>
+            </li>
+            <li class="me-4">
+              <p
+                class="lh-base mb-0 text-nowrap"
+                style="overflow-x: hidden; text-overflow: ellipsis"
+              >
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#personalisation-in-commercial-lending"
+                  >The Allure of Personalisation in Commercial Lending</a
+                >
+              </p>
+            </li>
+            <li class="me-4">
+              <p
+                class="lh-base mb-0 text-nowrap"
+                style="overflow-x: hidden; text-overflow: ellipsis"
+              >
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#advanced-credit-decisioning-model"
+                  >The Need for Advanced Credit Decisioning Models
+                </a>
+              </p>
+            </li>
+            <li class="me-4">
+              <p
+                class="lh-base mb-0 text-nowrap"
+                style="overflow-x: hidden; text-overflow: ellipsis"
+              >
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#tightening-regulatory-landscape"
+                  >The Tightening Regulatory Landscape</a
+                >
+              </p>
+            </li>
+            <li class="me-4">
+              <p
+                class="lh-base mb-0 text-nowrap"
+                style="overflow-x: hidden; text-overflow: ellipsis"
+              >
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#cutting-edge-technology"
+                  >The Adoption of Cutting-Edge Technology</a
+                >
+              </p>
+            </li>
+            <li class="me-4">
+              <p
+                class="lh-base mb-0 text-nowrap"
+                style="overflow-x: hidden; text-overflow: ellipsis"
+              >
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#sustainable-finance"
+                  >The Rise of Sustainable Finance</a
+                >
+              </p>
+            </li>
+            <li class="me-4">
+              <p
+                class="lh-base mb-0 text-nowrap"
+                style="overflow-x: hidden; text-overflow: ellipsis"
+              >
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#complete-digital-solution"
+                  >The Case for A Complete Digital Solution for Commercial
+                  Lending</a
+                >
+              </p>
+            </li>
+            <li class="me-4">
+              <p
+                class="lh-base mb-0 text-nowrap"
+                style="overflow-x: hidden; text-overflow: ellipsis"
+              >
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#conclusion"
+                  >Conclusion</a
+                >
+              </p>
+            </li>
+          </ul>
+          <div
+            class="d-flex py-3 justify-content-center"
+            style="background: #f9fafb"
+          >
+            <img class="mx-2" src="images/in-orange.svg" />
+            <img class="mx-2" src="images/x-orange.svg" />
+            <img class="mx-2" src="images/yt-orange.svg" />
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row px-5 pt-0">
+            <div>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                The pandemic changed how businesses operated. Restaurants,
+                malls, grocery stores and public spaces shut down. Employees
+                operated from home. Offices remained vacant and unlit.
+                Technology enabled every transaction and work process.
+              </p>
+
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                But the world settled on a new normal after COVID and 2023 saw a
+                record number in new business registrations in the US – and
+                consequently, the commercial lending market is expected to grow
+                from $9.7tn in 2020 to $27.4 tn by 2028 at an an annual growth
+                rate of 14.4%.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                In parallel, the commercial loan software market is booming as
+                well, and is expected to reach $23 bn in value by 2030 – more
+                and more businesses are turning to such digitized solutions due
+                to the increased complexities of lending processes, which
+                necessitate sophisticated tools to manage the commercial loan
+                life-cycle.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Commercial lending today has to adopt new technology to meet
+                shifting market demands. While players in this market are
+                updating their business models and tech stack, there is still a
+                need for an end-to-end digital solution that can handle the
+                entire commercial process from end-to-end.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                In this article, we will discuss how personalized lending can
+                assuage customer uncertainty in a high-interest, high-inflation
+                environment, and also consider how commercial lenders are
+                adopting new technology just to meet shifting compliance
+                regimes. We will also examine the rise of sustainable banking
+                and green lending risks, and finally make the case for a
+                comprehensive commercial lending solution.
+              </p>
+            </div>
+          </div>
+
+          <div class="row p-5 pt-0">
+            <div>
+              <h3 class="my-5" id="costumers-waiting-for-better">
+                Are Customers Waiting for Better Lending Conditions?
+              </h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Many Americans are apprehensive about the economy, believing it
+                is in recession, when this is not, in fact, the case.
+                Unemployment is down, GDP is on the rise, and the Fed’s move to
+                increase interest rates is pushing inflation down.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Of course, interest rates have been at their highest in 22
+                years, at 5.25-5.5%. Subjective perceptions and steep interest
+                rates have naturally made businesses wary of borrowing, and
+                small businesses are especially concerned about their capacity
+                to weather economic flux if they take on more debt.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                However, loan volumes did increase by 0.25% in March this year,
+                indicating that banks are loosening their lending policies in
+                response to an improving economic outlook. And let us not forget
+                the record number of business registrations – they will need
+                funds more than ever now, and commercial lending volumes may not
+                remain depressed for long.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                These are conditions where customized, personalized and flexible
+                lending solutions become paramount.
+              </p>
+
+              <h3 class="my-5" id="personalisation-in-commercial-lending">
+                The Allure of Personalisation in Commercial Lending
+              </h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Commercial lending is no longer about lending alone – businesses
+                want services that help them manage their finances better as
+                well. They want real-time financial data about their debt
+                obligations, custom dashboards, easy access to relationship
+                managers and bespoke loan products.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                This commercial lending trend is the result of a broader change
+                in customer’s borrowing preferences. Today’s customers are used
+                to services that blend human and digital interaction, and
+                anticipate, rather than address, their needs. They have similar
+                expectations from their commercial lenders. According to a
+                report by Capco, 72% of customers want and value personalized
+                commercial services. Many are willing to pay for digital alerts
+                about recurring payments, but also desire one-on-one
+                conversations with bank representatives rather than a chatbot
+                for guidance. Those that rate personalisation as ‘highly
+                important’ are also willing to share feedback on their
+                experience. All this indicates that they value digitisation, but
+                not when it becomes a barrier to smooth operations.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                It is a no-brainer that such a clientele would prefer flexible
+                loan terms, proactive outreach, transparent online
+                communication, and simplified and digitized application
+                processes. This is why KPMG suggests not just a core
+                modernisation of commercial lending processes, but a broader
+                digital transformation of a lender’s operations.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                But technology integration doesn’t just address the customer’s
+                needs. It also helps lenders navigate an increasingly complex
+                and stringent regulatory environment.
+              </p>
+
+              <h3 class="my-5" id="advanced-credit-decisioning-model">
+                The Need for Advanced Credit Decisioning Models
+              </h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                WWhile borrowers value personalisation, sophisticated credit
+                decisioning models are all but necessary for players to thrive
+                in the current commercial lending landscape. Transitioning to
+                such new models is not easy. Many banks face challenges due to
+                limited data sources, simple analytical tools, reliance on
+                subjective assessments, outdated and inflexible models, and
+                concerns about time-to-implementation and regulatory scrutiny.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                However, adopting such models gives stellar results – they have
+                boosted revenue by 5-15%, decreased credit losses by 20-40%, and
+                improved efficiency by up to 40%. Automating many aspects of the
+                assessment process and eliminating much of the paperwork helps
+                quickly identify the right customers and improve their
+                experience using straight-through processing. Precise default
+                risk predictions allows lenders to identify the level of
+                provisions and capital they must hold, and case prioritization
+                through automation allows lenders to pay more attention to
+                assess high-risk but otherwise promising prospects.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Those who adopt and refine new credit decisioning models gain a
+                competitive advantage while remaining compliant with regulatory
+                strictures, retain more customers who value the improved user
+                experience, and minimize risk by segmentation. The advent of
+                advanced credit decisioning models is a trend in commercial
+                lending that answers the needs of borrowers and lenders.
+              </p>
+
+              <h3 class="my-5" id="tightening-regulatory-landscape">
+                The Tightening Regulatory Landscape
+              </h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                In early 2023, nearly half of senior loan officers at major U.S.
+                banks reported tightening credit standards for commercial and
+                industrial loans due to economic uncertainties and
+                sector-specific risks in response mainly to tightening
+                regulations at the state and federal level.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                This commercial lending trend is actually quite recent – the US
+                government has not traditionally regulated commercial lending,
+                while consumer loans were governed strictly by laws such as the
+                Truth in Lending Act (TILA). Now, commercial lenders must comply
+                with new regulations and guidelines introduced at both the
+                federal and state level, without the sort of uniform framework
+                of a law like TILA.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Tightening regulations are part of a broader push for increased
+                oversight in the financial sector. Regulators seek to enforce
+                sound lending practices where institutions must manage all sorts
+                of risk, ranging from cybersecurity and data privacy to
+                environmental sustainability. Lenders are also under pressure to
+                ensure their practices are not just compliant, but in accordance
+                with broader societal attitudes about climate change, social
+                responsibility and corporate governance. The regulatory
+                landscape is fragmented and fraught with challenges.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                According to a KPMG report, commercial lenders rate regulatory
+                compliance as one of the primary drivers for transforming their
+                operating models and processes. Digital transformation automates
+                and standardizes compliance processes, ensures data accuracy and
+                privacy and is agile enough to adapt to shifting regulatory
+                trends. Technology aimed at addressing a lender’s regulatory
+                burden has been dubbed ‘RegTech’, and is a solution not only to
+                regulatory tightening but also the risks that come with
+                increasing personalisation, flexible loan terms and meeting
+                other borrower expectations.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Lenders are not just updating their tech infrastructure to meet
+                regulatory challenges. They are in fact trying to make sure that
+                their tech stack is future-proof in terms of customer needs,
+                regulatory changes and other technological advances in the
+                financial sector.
+              </p>
+
+              <h3 class="my-5" id="cutting-edge-technology">
+                The Adoption of Cutting-Edge Technology
+              </h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Technology is now a crucial part of the commercial lending
+                industry. Lenders are using digital tools to boost efficiency
+                and reduce costs while improving the customer’s experience with
+                more personalized services.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                At the heart of digital lending processes is automation – and
+                this covers everything from loan origination and underwriting to
+                servicing – and when combined with analytics, it also helps
+                lenders and borrowers engage better with each other – AI and
+                machine learning is helping to identify high-potential customers
+                and also tailor products to their needs.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                From speeding up approvals to fulfilling compliance
+                requirements, lenders are resorting to technology to meet
+                business demands. Technology is able to automate loan document
+                reviews, flag exceptions and even ensure adherence to
+                regulations both local and federal, letting underwriters focus
+                on higher-value tasks.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Advanced analytics is also helping lenders deal better with
+                risk. Parsing vast amounts of data from multiple sources gives
+                them a comprehensive overview of a borrower’s financial health.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Open banking and Application Program Interface (API) integration
+                are also contributing to digital transformation in commercial
+                lending and both these innovations allow financial institutions
+                and other service providers to share data with more
+                transparency, creating an interconnected financial ecosystem
+                that benefits both the lender and the borrower.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                A McKinsey study has revealed that 75% percent of the world’s
+                top 100 banks now offer public APIs. For instance, the consumer
+                division of a major financial services multinational has
+                launched a global API hub, allowing developers to share best
+                practices. In small-business lending, APIs like Plaid and Yodlee
+                are now standard, enabling direct integration of borrower data
+                with lenders' systems. This not only improves the speed and
+                accuracy of credit decisions but also allows lenders to offer
+                more personalized and flexible solutions to borrowers.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Technology does not just benefit the lender – it also gives
+                borrowers what they want. Borrowers expect easy access to
+                information and personalized services. Lenders who can deliver
+                this type of experience are more likely to attract and retain
+                customers in an increasingly competitive market.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                RegTech, AI, data analytics, open banking, API integration – all
+                these commercial lending trends form part of a wider digital
+                transformation in the financial services sector. It is not
+                without its challenges, but it brings significant rewards. A
+                McKinsey report states that such a transformation drives much
+                faster credit decisions, so that customers receive cash up to
+                80% faster, lowers costs by cutting decision-making time by
+                30-50%, and improves risk decisions, ensuring greater long-term
+                profitability.
+              </p>
+
+              <h3 class="my-5" id="sustainable-finance">
+                The Rise of Sustainable Finance
+              </h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Sustainable finance is now on the rise because of growing
+                consensus on environment, social and governance principles
+                (ESG). Both businesses and investors are incentivised to
+                prioritize sustainability, and this has led to a greater focus
+                on sustainable finance.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                The issuance of green, sustainable, and social bonds reached a
+                record $6 trillion in 2022, underscoring the growing demand for
+                financial products that support sustainability initiatives.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                This is not just restricted to the US but a world-wide
+                phenomenon, and suggests that a business is more likely to
+                receive funding if it is a green initiative and that it is more
+                likely to thrive if it adopts sustainable practices. Lenders can
+                do this math themselves – and have arrived at the same
+                conclusions, creating financial products such as green loans,
+                and sustainability-linked loans (SLL) that incentivize borrowers
+                to target and achieve explicit environmental or social outcomes.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                The Wilmington Trust states that sustainability-linked loans
+                have the potential to grow, especially since any loan can
+                technically include provisions that will impact terms if the
+                borrower does not achieve specific sustainability targets. But
+                both green loans and SLL’s are subject to stringent regulatory
+                criteria and are not free of risks. A KPMG report on ESG risks
+                strongly advises against simplistic solutions – such as
+                abandoning an ‘brown’ automotive supplier – because that would
+                only damage the lender’s reputation.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Sustainable finance is a relatively new trend in commercial
+                lending and needs to be charted carefully – and it is better to
+                use a tech-enhanced approach to its attendant risks rather than
+                use outdated business practices.
+              </p>
+
+              <h3 class="my-5" id="complete-digital-solution">
+                The Case for A Complete Digital Solution for Commercial Lending
+              </h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Given the commercial lending trends we have discussed, the need
+                for an end-to-end commercial lending software platform is
+                evident. The combination of shifting customer sentiment,
+                tightening regulations, and the adoption of technology
+                underscores the importance of a comprehensive digital solution.
+                Such a platform would streamline the entire commercial lending
+                lifecycle, from application to compliance, risk management, and
+                loan servicing.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Technology integration is already underway, driven by both
+                customer demand and regulatory pressures. Borrowers are
+                increasingly seeking software-enabled solutions that offer
+                personalized experiences and simplify the lending process. At
+                the same time, the complexity of the regulatory landscape
+                requires automated tools that can handle compliance and
+                de-risking with precision and efficiency.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                In today’s market, an end-to-end commercial lending software
+                platform represents the natural evolution of an industry that
+                has to constantly hit a moving target, simplifying processes for
+                borrowers, addressing the complexity of regulatory norms and
+                managing risks both old and new. For lenders looking to stay
+                competitive and meet the demands of modern borrowers, investing
+                in a complete digital solution is the logical next step.
+              </p>
+
+              <h3 class="my-5" id="conclusion">Conclusion</h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                An end-to-end software solution is perhaps the only answer to
+                the contradictory commercial lending space. New business
+                applications are at a record high, but so are US interest rates.
+                Technological transformation is underway, but it appears to be
+                on a piecemeal basis. Borrowers want personalized and
+                streamlined experiences, but this requires precise credit
+                decisioning models. Compliance requirements change from state to
+                state – unheard of until recently. Sustainable lending and ESG
+                principles are rapidly coming to the forefront, but are also
+                subject to serious risks. Financial institutions have to
+                capitalize on current trends or risk becoming obsolete.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                A platform such as ours is an end-to-end solution, but it is not
+                a one-size-fits-all product. From loan origination and
+                underwriting to reporting and precise analytics, our automated
+                solution propels revenue generation. By smashing silos with a
+                digitized lending platform, our services enable our customers to
+                maximize growth and operational efficiency. Our granular
+                customer insights allow our clients to scrutinize every prospect
+                thoroughly, making informed commercial lending decisions.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                A platform such as ours is an end-to-end solution, but it is not
+                a one-size-fits-all product. We cover the gamut of commercial
+                lending – loan origination, underwriting, reporting and precise
+                analytics, propelling revenue growth. We smash silos with our
+                digitized lending platform; our services help our customers
+                operate more efficiently, and our customer insights enable our
+                clients to scrutinize every prospect thoroughly, ensuring that
+                no customer is underserved.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                Will such a platform manage to resolve the contradictions in the
+                commercial lending sector? Yes.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="background: #e6eeed">
+      <div class="container-xl py-5">
+        <div class="mt-4 text-center">
+          <h4 class="mb-4">Latest News</h4>
+        </div>
+
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-start"
+        >
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card" style="background-color: transparent">
+              <a
+                href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers"
+              >
+                <img src="images/card1.svg" class="img-fluid" />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2">Alec Whitten • 17 Jan 2022</span>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Seven Innovative Strategies for Smaller Commercial Banks
+                      to
+                      <br />
+                      De-risk Borrowers
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  In a world increasingly driven by technology, data, and
+                  digital marketing...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-maroon">Leadership</a>
+                <a href="#" class="tag tag-grey">Management</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card" style="background-color: transparent">
+              <a href="/next-generation-credit-decisioning-models">
+                <img src="images/card2.svg" class="img-fluid" />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 16 Jan 2022</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/next-generation-credit-decisioning-models"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Next-Generation Credit Decisioning Models: A Deep Dive
+                      into Future-Ready Solutions
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  The development and application of advanced credit decisioning
+                  models are integral...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card" style="background-color: transparent">
+              <a href="/commercial-lending-trends">
+                <img src="images/card3.svg" class="img-fluid" />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 28 Aug 2024</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/commercial-lending-trends"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Commercial Lending Trends: The Need for A Complete
+                      Platform
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  The pandemic changed how businesses operated. Restaurants,
+                  malls,...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card" style="background-color: transparent">
+              <a href="/commercial-lending-in-the-US">
+                <img
+                  src="images/card4.avif"
+                  class="img-fluid"
+                  style="border-radius: 10px"
+                />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 29 Aug 2024</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/commercial-lending-in-the-US"
+                      style="all: unset; cursor: pointer"
+                    >
+                      An Introduction to Commercial Lending in the US
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  A commercial loan is a debt instrument advanced to support
+                  business activity and growth...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center my-1">
+          <ul>
+            <li style="list-style: none">
+              <a
+                class="cta-secondary"
+                style="color: #546662"
+                href="commercial-lending-insights"
+                >See More</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex flex-column align-items-center py-5"
+      style="
+        background: url('images/insights-bg.svg') no-repeat #015f56;
+        background-size: 100%;
+        color: #ffffff;
+      "
+    >
+      <div class="container-xl">
+        <div
+          class="col-lg-6 mx-auto d-flex justify-content-center gap-4 flex-column text-center"
+        >
+          <h2
+            class="font-family-plus-jakarta-sans fs-1 fw-bold text-center"
+            style="
+              font-size: 45px;
+              line-height: 56.25px;
+              letter-spacing: -0.03em;
+            "
+          >
+            Subscribe Now
+          </h2>
+
+          <p class="font-family-plus-jakarta-sans fs-5 fw-bold text-center">
+            Contact our support team for further assistance.
+          </p>
+
+          <div class="input-group mx-auto justify-content-center">
+            <input
+              type="text"
+              style="
+                border-top: 1px solid #d9d9d9;
+                border-bottom: 1px solid #d9d9d9;
+                border-left: 1px solid #d9d9d9;
+                border-right: none;
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+                background: transparent;
+                width: 313px;
+                padding: 26px 40px 26px 40px;
+                color: #fff;
+              "
+              placeholder="Enter Your Email"
+              class="p-4"
+            /><a
+              class="cta-orange"
+              style="
+                padding: 26px 40px 26px 40px;
+                border-radius: 50px;
+                width: 177px;
+                margin-left: -50px;
+              "
+              >Subscribe</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="container-fluid bg-light d-flex justify-content-between align-items-center py-5"
+      id="footer"
+    ></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function () {
+        $("#footer").load("./footer.html");
+        $("#navigation").load("./navbar.html");
+
+        $(".rounded-rect").hover(
+          function () {
+            $(this)
+              .find(".title")
+              .text(
+                "Finanta’s Digital Credit Presentation feature comes equipped with standardized templates that streamline the creation of compelling loan narratives, ensuring consistency and clarity in every credit presentation. "
+              );
+            $(this).css("font-size", "12px");
+          },
+          function () {
+            $(this)
+              .find(".title")
+              .text("Standardized Loan Narrative Templates");
+            $(this).css("font-size", "15px");
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

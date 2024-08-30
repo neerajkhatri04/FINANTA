@@ -1,410 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rahul Banerjee" />
+    <title>Finanta</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  <meta name="author" content="Rahul Banerjee" />
-  <title>Finanta</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet" />
-
-  <link rel="stylesheet" type="text/css" href="styles/style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <style>
-    .accordion-icon {
-      float: right;
-    }
-
-    .accordion .card {
-      background: #015f56;
-      color: #ffffff;
-      margin-bottom: 20px;
-      border-radius: 15px;
-    }
-
-    .accordion .card button {
-      background: transparent;
-      color: #ffffff;
-      margin-bottom: 0px;
-    }
-
-    .card-text {
-      min-height: 6em;
-      /* Adjust based on your font size and line height */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: normal;
-      line-height: 1.5;
-      /* Adjust line height as needed */
-    }
-    .card button{
-      text-align: left;
-    }
-  </style>
-
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      // https://dashboard.emailjs.com/admin/account
-      emailjs.init({
-        publicKey: "6M0L1GthrogPmB4ku",
-      });
-    })();
-  </script>
-  <script type="text/javascript">
-    window.onload = function () {
-      var form = document.getElementById("contact-form");
-      var success = document.getElementById("success");
-
-      function resetForm() {
-        form.reset();
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .accordion-icon {
+        float: right;
       }
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
-            () => {
-              console.log("SUCCESS!");
-              resetForm();
-              success.innerHTML =
-                "<span style='color:green'>Your message has been sent successfully!</span>";
-            },
-            (error) => {
-              console.log("FAILED...", error);
-            }
-          );
+
+      .accordion .card {
+        background: #015f56;
+        color: #ffffff;
+        margin-bottom: 20px;
+        border-radius: 15px;
+      }
+
+      .accordion .card button {
+        background: transparent;
+        color: #ffffff;
+        margin-bottom: 0px;
+      }
+
+      .card-text {
+        min-height: 6em;
+        /* Adjust based on your font size and line height */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.5;
+        /* Adjust line height as needed */
+      }
+      .card button {
+        text-align: left;
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "6M0L1GthrogPmB4ku",
         });
-    };
-  </script>
-  <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
-</head>
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var form = document.getElementById("contact-form");
+        var success = document.getElementById("success");
 
-<body class="">
-  <nav class="navbar navbar-expand-lg navbar-light topnav bg-landing" id="navigation"></nav>
+        function resetForm() {
+          form.reset();
+        }
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            emailjs.sendForm("service_hue4fwz", "template_vdayssm", this).then(
+              () => {
+                console.log("SUCCESS!");
+                resetForm();
+                success.innerHTML =
+                  "<span style='color:green'>Your message has been sent successfully!</span>";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script src="//fw-cdn.com/11058977/3797860.js" chat="true"></script>
+  </head>
 
-  <div class="container-fluid" style="
+  <body class="">
+    <nav
+      class="navbar navbar-expand-lg navbar-light topnav bg-landing"
+      id="navigation"
+    ></nav>
+
+    <div
+      class="container-fluid"
+      style="
         background-image: url('images/blogbg.png');
         background-size: cover;
         background-position: left center;
         padding: 200px;
         opacity: 0.8;
-      ">
-    <div class="container-xl">
-      <div class="d-flex flex-column align-items-center">
-        <div class="col-lg-12 text-center text-md-center text-center">
-          <h3 class="display-5 lh-1 fw-bold p-3 text-white">
-            Seven Innovative Strategies for Smaller Commercial Banks to
-            De-risk Borrowers
-          </h3>
+      "
+    >
+      <div class="container-xl">
+        <div class="d-flex flex-column align-items-center">
+          <div class="col-lg-12 text-center text-md-center text-center">
+            <h3 class="display-5 lh-1 fw-bold p-3 text-white">
+              Seven Innovative Strategies for Smaller Commercial Banks to
+              De-risk Borrowers
+            </h3>
 
-          <div class="d-flex justify-content-center col-lg-3 mx-auto mb-3">
-            <p class="text-white">15 Jan 2022</p>
-            <p class="text-white">&bull;</p>
-            <p class="text-white">15 min read</p>
-          </div>
-
-          <div class="col-lg-12 text-center text-md-center text-center d-flex gap-4 justify-content-center">
-            <a class="cta bg-white" style="color: #015f56">Download a resource</a>
-            <a class="cta-secondary text-white">Explore our other blog posts</a>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex flex-column"></div>
-    </div>
-  </div>
-
-  <div class="container-fluid my-5">
-    <div class="container-xl d-flex">
-      <div style="width: 326px">
-        <ul class="sidebar gap-1">
-          <li class="me-4">
-            <p class="font-family-plus-jakarta-sans fw-bold lh-2 text-left"
-              style="font-size: 20px; line-height: 33px; color: #546662">
-              Table of contents
-            </p>
-          </li>
-          <li class="me-4">
-            <p class="lh-base text-nowrap mb-0">
-              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
-                    all: unset;
-                    font-size: 16px;
-                    line-height: 33px;
-                    color: #546662;
-                  " href="#strategies">Innovative Strategies</a>
-            </p>
-          </li>
-          <li class="me-4">
-            <p class="lh-base text-nowrap mb-0">
-              <a class="font-family-plus-jakarta-sans fw-bold text-center" style="
-                    all: unset;
-                    font-size: 16px;
-                    line-height: 33px;
-                    color: #546662;
-                  " href="#questions">Frequently Asked Questions</a>
-            </p>
-          </li>
-        </ul>
-        <div class="d-flex py-3 justify-content-center" style="background: #f9fafb">
-          <img class="mx-2" src="images/in-orange.svg" />
-          <img class="mx-2" src="images/x-orange.svg" />
-          <img class="mx-2" src="images/yt-orange.svg" />
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row px-5 pt-0">
-          <div>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              In a world increasingly driven by technology, data, and digital
-              marketing, smaller commercial banks must leverage these
-              resources effectively to de-risk borrowers, reduce default
-              rates, offer competitive pricing, and expand their reach. Here,
-              we present seven strategies that they can employ.
-            </p>
+            <div class="d-flex justify-content-center col-lg-3 mx-auto mb-3">
+              <p class="text-white">15 Jan 2022</p>
+              <p class="text-white">&bull;</p>
+              <p class="text-white">15 min read</p>
+            </div>
 
             <div
-              class="d-grid justify-content-center align-items-center px-5 rounded-3 pb-3 pb-md-5 pt-3 pt-md-5 mb-3 mb-md-5 mt-md-5"
-              style="background-color: #006d77">
-              <div class="text-center mx-auto" style="max-width: 625px">
-                <img class="mb-3 mx-auto d-block" style="transform: scale(0.75)" src="images/icon-left-quote.svg"
-                  alt="quote icon" />
-                <p class="text-white font-chivo mb-3 fs-5" style="font-size: 1.25rem; line-height: 1.5">
-                  Leverage the power of data, technology, and digital
-                  marketing to de-risk borrowers.
+              class="col-lg-12 text-center text-md-center text-center d-flex gap-4 justify-content-center"
+            >
+              <a class="cta bg-white" style="color: #015f56"
+                >Download a resource</a
+              >
+              <a class="cta-secondary text-white"
+                >Explore our other blog posts</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid my-5">
+      <div class="container-xl d-flex">
+        <div style="width: 326px">
+          <ul class="sidebar gap-1">
+            <li class="me-4">
+              <p
+                class="font-family-plus-jakarta-sans fw-bold lh-2 text-left"
+                style="font-size: 20px; line-height: 33px; color: #546662"
+              >
+                Table of contents
+              </p>
+            </li>
+            <li class="me-4">
+              <p class="lh-base text-nowrap mb-0">
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#strategies"
+                  >Innovative Strategies</a
+                >
+              </p>
+            </li>
+            <li class="me-4">
+              <p class="lh-base text-nowrap mb-0">
+                <a
+                  class="font-family-plus-jakarta-sans fw-bold text-center"
+                  style="
+                    all: unset;
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #546662;
+                  "
+                  href="#questions"
+                  >Frequently Asked Questions</a
+                >
+              </p>
+            </li>
+          </ul>
+          <div
+            class="d-flex py-3 justify-content-center"
+            style="background: #f9fafb"
+          >
+            <img class="mx-2" src="images/in-orange.svg" />
+            <img class="mx-2" src="images/x-orange.svg" />
+            <img class="mx-2" src="images/yt-orange.svg" />
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row px-5 pt-0">
+            <div>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                In a world increasingly driven by technology, data, and digital
+                marketing, smaller commercial banks must leverage these
+                resources effectively to de-risk borrowers, reduce default
+                rates, offer competitive pricing, and expand their reach. Here,
+                we present seven strategies that they can employ.
+              </p>
+
+              <div
+                class="d-grid justify-content-center align-items-center px-5 rounded-3 pb-3 pb-md-5 pt-3 pt-md-5 mb-3 mb-md-5 mt-md-5"
+                style="background-color: #006d77"
+              >
+                <div class="text-center mx-auto" style="max-width: 625px">
+                  <img
+                    class="mb-3 mx-auto d-block"
+                    style="transform: scale(0.75)"
+                    src="images/icon-left-quote.svg"
+                    alt="quote icon"
+                  />
+                  <p
+                    class="text-white font-chivo mb-3 fs-5"
+                    style="font-size: 1.25rem; line-height: 1.5"
+                  >
+                    Leverage the power of data, technology, and digital
+                    marketing to de-risk borrowers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row p-5 pt-0">
+            <div>
+              <h3 class="my-5" id="strategies">Innovative Strategies:</h3>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                <span class="fw-bold">De-risking Through Financing</span>
+                Instead of traditional fixed loan models, banks can explore more
+                innovative financing methods such as revenue-based financing or
+                factoring, which align the interests of the bank and the
+                borrower. These methods reduce risk as repayments are directly
+                linked to the business's performance, thus reducing the
+                probability of default.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                <span class="fw-bold">Key Lesson:</span> Embrace innovative
+                financing methods that correlate repayments with the borrower's
+                capacity, thereby reducing default risk.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                <span class="fw-bold">Ensuring Repayment Behavior:</span>
+                Advanced analytics and machine learning models can be employed
+                to analyze past repayment behavior, identifying key
+                characteristics of borrowers that indicate a higher likelihood
+                of timely repayment. Banks can use this information to make
+                informed lending decisions and to create products that encourage
+                such behavior.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                <span class="fw-bold">Key Lesson:</span> Leverage data analytics
+                and machine learning models to promote positive repayment
+                behavior.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                <span class="fw-bold">Focusing on Positive Selection:</span>
+                Banks can focus on customer segments that exhibit low credit
+                risk but are underserved by traditional financial institutions.
+                Using machine learning models, they can analyze demographic,
+                behavioral, and transactional data to identify these segments
+                and offer them personalized loan products.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                <span class="fw-bold">Key Lesson:</span> Employ advanced data
+                analytics to target low-risk, underserved customer segments,
+                thereby increasing market reach while controlling risk.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                <span class="fw-bold">Aligning Incentives:</span> Incentive
+                alignment can be achieved by creating loan products that reward
+                timely repayments with reduced interest rates or other benefits.
+                This not only encourages borrowers to maintain good credit
+                behavior but also improves customer loyalty and retention.
+              </p>
+              <p
+                class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
+                style="text-align: left; color: #546662"
+              >
+                <span class="fw-bold">Key Lesson:</span> Design loan products
+                with aligned incentives to encourage timely repayments and
+                foster long-term customer relationships.
+              </p>
+            </div>
+          </div>
+
+          <div class="row p-5 pt-0">
+            <div>
+              <h3 class="my-5" id="questions">Frequently Asked Questions</h3>
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button
+                        class="btn btn-link"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        How can smaller commercial banks use innovative
+                        financing methods to reduce risk?
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div
+                    id="collapseOne"
+                    class="collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordionExample"
+                  >
+                    <div class="card-body">
+                      Smaller commercial banks can reduce their exposure to risk
+                      by adopting innovative financing methods like
+                      revenue-based financing or factoring. These methods link
+                      loan repayments to the business's performance, making it
+                      more likely that repayments are made as the business
+                      earns. This approach not only decreases the likelihood of
+                      default but also aligns the interests of the bank with
+                      those of the borrower, facilitating a partnership approach
+                      rather than a purely transactional relationship.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button
+                        class="btn btn-link collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        What role does data analytics play in enhancing the
+                        lending decisions of smaller commercial banks?
+                      </button>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordionExample"
+                  >
+                    <div class="card-body">
+                      Data analytics, particularly when combined with machine
+                      learning models, plays a crucial role in enhancing lending
+                      decisions by allowing banks to analyze past repayment
+                      behaviors and identify characteristics that predict timely
+                      repayment. This information helps banks make more informed
+                      decisions, create tailored products that encourage
+                      positive repayment behavior, and focus on low-risk,
+                      underserved customer segments. By employing these
+                      technologies, banks can expand their market reach while
+                      controlling risk more effectively.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="background: #e6eeed">
+      <div class="container-xl py-5">
+        <div class="mt-4 text-center">
+          <h4 class="mb-4">Latest News</h4>
+        </div>
+
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-start"
+        >
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card" style="background-color: transparent">
+              <a
+                href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers"
+              >
+                <img src="images/card1.svg" class="img-fluid" />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2">Alec Whitten • 17 Jan 2022</span>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Seven Innovative Strategies for Smaller Commercial Banks
+                      to
+                      <br />
+                      De-risk Borrowers
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  In a world increasingly driven by technology, data, and
+                  digital marketing...
                 </p>
               </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-maroon">Leadership</a>
+                <a href="#" class="tag tag-grey">Management</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="row p-5 pt-0">
-          <div>
-            <h3 class="my-5" id="strategies">Innovative Strategies:</h3>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              <span class="fw-bold">De-risking Through Financing</span>
-              Instead of traditional fixed loan models, banks can explore more
-              innovative financing methods such as revenue-based financing or
-              factoring, which align the interests of the bank and the
-              borrower. These methods reduce risk as repayments are directly
-              linked to the business's performance, thus reducing the
-              probability of default.
-            </p>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              <span class="fw-bold">Key Lesson:</span> Embrace innovative
-              financing methods that correlate repayments with the borrower's
-              capacity, thereby reducing default risk.
-            </p>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              <span class="fw-bold">Ensuring Repayment Behavior:</span>
-              Advanced analytics and machine learning models can be employed
-              to analyze past repayment behavior, identifying key
-              characteristics of borrowers that indicate a higher likelihood
-              of timely repayment. Banks can use this information to make
-              informed lending decisions and to create products that encourage
-              such behavior.
-            </p>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              <span class="fw-bold">Key Lesson:</span> Leverage data analytics
-              and machine learning models to promote positive repayment
-              behavior.
-            </p>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              <span class="fw-bold">Focusing on Positive Selection:</span>
-              Banks can focus on customer segments that exhibit low credit
-              risk but are underserved by traditional financial institutions.
-              Using machine learning models, they can analyze demographic,
-              behavioral, and transactional data to identify these segments
-              and offer them personalized loan products.
-            </p>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              <span class="fw-bold">Key Lesson:</span> Employ advanced data
-              analytics to target low-risk, underserved customer segments,
-              thereby increasing market reach while controlling risk.
-            </p>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              <span class="fw-bold">Aligning Incentives:</span> Incentive
-              alignment can be achieved by creating loan products that reward
-              timely repayments with reduced interest rates or other benefits.
-              This not only encourages borrowers to maintain good credit
-              behavior but also improves customer loyalty and retention.
-            </p>
-            <p class="font-family-plus-jakarta-sans fs-5 fw-normal lh-1.5 mb-3"
-              style="text-align: left; color: #546662">
-              <span class="fw-bold">Key Lesson:</span> Design loan products
-              with aligned incentives to encourage timely repayments and
-              foster long-term customer relationships.
-            </p>
-          </div>
-        </div>
-
-        <div class="row p-5 pt-0">
-          <div>
-            <h3 class="my-5" id="questions">Frequently Asked Questions</h3>
-            <div class="accordion" id="accordionExample">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseOne"
-                      aria-expanded="true" aria-controls="collapseOne">
-                      How can smaller commercial banks use innovative financing methods to reduce risk?
-                    </button>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card" style="background-color: transparent">
+              <a href="/next-generation-credit-decisioning-models">
+                <img src="images/card2.svg" class="img-fluid" />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 16 Jan 2022</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/next-generation-credit-decisioning-models"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Next-Generation Credit Decisioning Models: A Deep Dive
+                      into Future-Ready Solutions
+                    </a>
                   </h5>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body">
-                    Smaller commercial banks can reduce their exposure to risk by adopting innovative financing methods like revenue-based financing or factoring. These methods link loan repayments to the business's performance, making it more likely that repayments are made as the business earns. This approach not only decreases the likelihood of default but also aligns the interests of the bank with those of the borrower, facilitating a partnership approach rather than a purely transactional relationship.
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed " type="button" data-toggle="collapse"
-                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      What role does data analytics play in enhancing the lending decisions of smaller commercial banks?
-                    </button>
+              <div class="card-body px-0 py-2">
+                <p>
+                  The development and application of advanced credit decisioning
+                  models are integral...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card" style="background-color: transparent">
+              <a href="/commercial-lending-trends">
+                <img src="images/card3.svg" class="img-fluid" />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 28 Aug 2024</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/commercial-lending-trends"
+                      style="all: unset; cursor: pointer"
+                    >
+                      Commercial Lending Trends: The Need for A Complete
+                      Platform
+                    </a>
                   </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                  <div class="card-body">
-                    Data analytics, particularly when combined with machine learning models, plays a crucial role in enhancing lending decisions by allowing banks to analyze past repayment behaviors and identify characteristics that predict timely repayment. This information helps banks make more informed decisions, create tailored products that encourage positive repayment behavior, and focus on low-risk, underserved customer segments. By employing these technologies, banks can expand their market reach while controlling risk more effectively.
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
                   </div>
                 </div>
               </div>
-
+              <div class="card-body px-0 py-2">
+                <p>
+                  The pandemic changed how businesses operated. Restaurants,
+                  malls,...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
             </div>
           </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
+            <div class="card" style="background-color: transparent">
+              <a href="/commercial-lending-in-the-US">
+                <img
+                  src="images/card4.avif"
+                  class="img-fluid"
+                  style="border-radius: 10px"
+                />
+              </a>
+              <div class="card-body px-0 py-2">
+                <span class="fw-smaller py-2"
+                  >Demi WIlkinson • 29 Aug 2024</span
+                >
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">
+                    <a
+                      href="/commercial-lending-in-the-US"
+                      style="all: unset; cursor: pointer"
+                    >
+                      An Introduction to Commercial Lending in the US
+                    </a>
+                  </h5>
+                  <div
+                    class="d-flex flex-column"
+                    style="height: 12px; width: 12px"
+                  >
+                    <img src="images/right-arrow.png" class="img" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body px-0 py-2">
+                <p>
+                  A commercial loan is a debt instrument advanced to support
+                  business activity and growth...
+                </p>
+              </div>
+              <div class="card-body px-0 py-2">
+                <a href="#" class="tag tag-green">Product</a>
+                <a href="#" class="tag card-link">Research</a>
+                <a href="#" class="tag tag-red">Frameworks</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center my-1">
+          <ul>
+            <li style="list-style: none">
+              <a
+                class="cta-secondary"
+                style="color: #546662"
+                href="commercial-lending-insights"
+                >See More</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container-fluid" style="background: #E6EEED">
-    <div class="container-xl py-5">
-      <div class="mt-4 text-center">
-        <h4 class="mb-4">Latest News</h4>
-      </div>
-
-      <div class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-center">
-        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
-          <div class="card" style="background-color: transparent;">
-            <img src="images/card1.svg" class="img-fluid" />
-            <div class="card-body px-0 py-2">
-              <span class="fw-smaller py-2">Alec Whitten • 17 Jan 2022</span>
-              <div class="d-flex justify-content-between align-items-center">
-                <h5 class="card-title">
-                  <a href="/Innovative-Strategies-for-Smaller-Commercial-Banks-to-De-risk-Borrowers.html"
-                    style="all: unset; cursor: pointer">
-                    Seven Innovative Strategies for Smaller Commercial Banks
-                    to
-                    <br />
-                    De-risk Borrowers
-                  </a>
-                </h5>
-                <div class="d-flex flex-column" style="height: 12px; width: 12px">
-                  <img src="images/right-arrow.png" class="img" />
-                </div>
-              </div>
-            </div>
-            <div class="card-body px-0 py-2">
-              <p>
-                In a world increasingly driven by technology, data, and
-                digital marketing...
-              </p>
-            </div>
-            <div class="card-body px-0 py-2">
-              <a href="#" class="tag tag-maroon">Leadership</a>
-              <a href="#" class="tag tag-grey">Management</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-3">
-          <div class="card" style="background-color: transparent;">
-            <img src="images/card2.svg" class="img-fluid" />
-            <div class="card-body px-0 py-2">
-              <span class="fw-smaller py-2">Demi WIlkinson • 16 Jan 2022</span>
-              <div class="d-flex justify-content-between align-items-center">
-                <h5 class="card-title">
-                  <a href="/next-generation-credit-decisioning-models.html" style="all: unset; cursor: pointer">
-                    Next-Generation Credit Decisioning Models: A Deep Dive
-                    into Future-Ready Solutions
-                  </a>
-                </h5>
-                <div class="d-flex flex-column" style="height: 12px; width: 12px">
-                  <img src="images/right-arrow.png" class="img" />
-                </div>
-              </div>
-            </div>
-            <div class="card-body px-0 py-2">
-              <p>
-                The development and application of advanced credit decisioning
-                models are integral...
-              </p>
-            </div>
-            <div class="card-body px-0 py-2">
-              <a href="#" class="tag tag-green">Product</a>
-              <a href="#" class="tag card-link">Research</a>
-              <a href="#" class="tag tag-red">Frameworks</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-center my-1">
-        <ul>
-          <li style="list-style: none">
-            <a class="cta-secondary" style="color: #546662" href="insights.html">See More</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid d-flex flex-column align-items-center py-5" style="
+    <div
+      class="container-fluid d-flex flex-column align-items-center py-5"
+      style="
         background: url('images/insights-bg.svg') no-repeat #015f56;
         background-size: 100%;
         color: #ffffff;
-      ">
-    <div class="container-xl">
-      <div class="col-lg-6 mx-auto d-flex justify-content-center gap-4 flex-column text-center">
-        <h2 class="font-family-plus-jakarta-sans fs-1 fw-bold text-center" style="
+      "
+    >
+      <div class="container-xl">
+        <div
+          class="col-lg-6 mx-auto d-flex justify-content-center gap-4 flex-column text-center"
+        >
+          <h2
+            class="font-family-plus-jakarta-sans fs-1 fw-bold text-center"
+            style="
               font-size: 45px;
               line-height: 56.25px;
               letter-spacing: -0.03em;
-            ">
-          Subscribe Now
-        </h2>
+            "
+          >
+            Subscribe Now
+          </h2>
 
-        <p class="font-family-plus-jakarta-sans fs-5 fw-bold text-center">
-          Contact our support team for further assistance.
-        </p>
+          <p class="font-family-plus-jakarta-sans fs-5 fw-bold text-center">
+            Contact our support team for further assistance.
+          </p>
 
-        <div class="input-group mx-auto justify-content-center">
-          <input type="text" style="
+          <div class="input-group mx-auto justify-content-center">
+            <input
+              type="text"
+              style="
                 border-top: 1px solid #d9d9d9;
                 border-bottom: 1px solid #d9d9d9;
                 border-left: 1px solid #d9d9d9;
@@ -415,46 +635,55 @@
                 width: 313px;
                 padding: 26px 40px 26px 40px;
                 color: #fff;
-              " placeholder="Enter Your Email" class="p-4" /><a class="cta-orange" style="
+              "
+              placeholder="Enter Your Email"
+              class="p-4"
+            /><a
+              class="cta-orange"
+              style="
                 padding: 26px 40px 26px 40px;
                 border-radius: 50px;
                 width: 177px;
                 margin-left: -50px;
-              ">Subscribe</a>
+              "
+              >Subscribe</a
+            >
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <footer class="container-fluid bg-light d-flex justify-content-between align-items-center py-5" id="footer"></footer>
+    <footer
+      class="container-fluid bg-light d-flex justify-content-between align-items-center py-5"
+      id="footer"
+    ></footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <script>
-    $(function () {
-      $("#footer").load("./footer.html");
-      $("#navigation").load("./navbar.html");
+    <script>
+      $(function () {
+        $("#footer").load("./footer.html");
+        $("#navigation").load("./navbar.html");
 
-      $(".rounded-rect").hover(
-        function () {
-          $(this)
-            .find(".title")
-            .text(
-              "Finanta’s Digital Credit Presentation feature comes equipped with standardized templates that streamline the creation of compelling loan narratives, ensuring consistency and clarity in every credit presentation. "
-            );
-          $(this).css("font-size", "12px");
-        },
-        function () {
-          $(this)
-            .find(".title")
-            .text("Standardized Loan Narrative Templates");
-          $(this).css("font-size", "15px");
-        }
-      );
-    });
-  </script>
-</body>
-
+        $(".rounded-rect").hover(
+          function () {
+            $(this)
+              .find(".title")
+              .text(
+                "Finanta’s Digital Credit Presentation feature comes equipped with standardized templates that streamline the creation of compelling loan narratives, ensuring consistency and clarity in every credit presentation. "
+              );
+            $(this).css("font-size", "12px");
+          },
+          function () {
+            $(this)
+              .find(".title")
+              .text("Standardized Loan Narrative Templates");
+            $(this).css("font-size", "15px");
+          }
+        );
+      });
+    </script>
+  </body>
 </html>
